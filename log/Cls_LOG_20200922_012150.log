@@ -1,0 +1,59 @@
+train_cls.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 1024
+
+[num_classes]: 40
+
+[batch_size]: 32
+
+[base_lr]: 0.001
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.7
+
+[decay_step]: 21
+
+[epochs]: 120
+
+[weight_decay]: 1e-05
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 1
+
+[print_freq_iter]: 40
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: cls
+
+[data_root]: /media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+
+**************************
+
+Traceback (most recent call last):
+  File "train_cls.py", line 183, in <module>
+    main()
+  File "train_cls.py", line 59, in main
+    train_dataset = ModelNet40Cls(num_points = args.num_points, root = args.data_root, transforms=train_transforms)
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/data/ModelNet40Loader.py", line 44, in __init__
+    os.path.join(self.data_dir, 'train_files.txt'))
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/data/ModelNet40Loader.py", line 10, in _get_data_files
+    with open(list_filename) as f:
+FileNotFoundError: [Errno 2] No such file or directory: '/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048/modelnet40_ply_hdf5_2048/train_files.txt'

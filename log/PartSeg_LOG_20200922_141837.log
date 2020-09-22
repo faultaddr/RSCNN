@@ -1,0 +1,163 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.001
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 21
+
+[epochs]: 200
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 0.7
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+[epoch   1:   0/499] 	 train loss: 5.142435 	 lr: 0.00100
+[epoch   1:  20/499] 	 train loss: 3.613924 	 lr: 0.00100
+[epoch   1:  40/499] 	 train loss: 3.095376 	 lr: 0.00100
+[epoch   1:  60/499] 	 train loss: 2.959201 	 lr: 0.00100
+[epoch   1:  80/499] 	 train loss: 2.987481 	 lr: 0.00100
+[epoch   1: 100/499] 	 train loss: 2.756157 	 lr: 0.00100
+[epoch   1: 120/499] 	 train loss: 2.713291 	 lr: 0.00100
+[epoch   1: 140/499] 	 train loss: 2.345822 	 lr: 0.00100
+[epoch   1: 160/499] 	 train loss: 2.109930 	 lr: 0.00100
+[epoch   1: 180/499] 	 train loss: 1.822110 	 lr: 0.00100
+[epoch   1: 200/499] 	 train loss: 1.914330 	 lr: 0.00100
+[epoch   1: 220/499] 	 train loss: 1.547187 	 lr: 0.00100
+[epoch   1: 240/499] 	 train loss: 1.568556 	 lr: 0.00100
+[epoch   1: 260/499] 	 train loss: 1.285866 	 lr: 0.00100
+[epoch   1: 280/499] 	 train loss: 1.089638 	 lr: 0.00100
+[epoch   1: 300/499] 	 train loss: 1.338247 	 lr: 0.00100
+[epoch   1: 320/499] 	 train loss: 1.288435 	 lr: 0.00100
+[epoch   1: 340/499] 	 train loss: 1.001934 	 lr: 0.00100
+****** Airplane: 0.098974
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.208807
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.323427
+****** Laptop: 0.000000
+****** Motorbike: 0.055556
+****** Mug: 0.026316
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.215054
+****** Table: 0.224450
+************ Test Loss: 28.705189
+************ Class_mIoU: 0.083906
+************ Instance_mIoU: 0.169131
+[epoch   1: 360/499] 	 train loss: 1.209651 	 lr: 0.00100
+[epoch   1: 380/499] 	 train loss: 1.132935 	 lr: 0.00100
+[epoch   1: 400/499] 	 train loss: 1.295184 	 lr: 0.00100
+[epoch   1: 420/499] 	 train loss: 1.260758 	 lr: 0.00100
+[epoch   1: 440/499] 	 train loss: 1.229515 	 lr: 0.00100
+[epoch   1: 460/499] 	 train loss: 0.972385 	 lr: 0.00100
+[epoch   1: 480/499] 	 train loss: 1.137512 	 lr: 0.00100
+[epoch   2:   0/499] 	 train loss: 1.024454 	 lr: 0.00100
+[epoch   2:  20/499] 	 train loss: 0.938078 	 lr: 0.00100
+[epoch   2:  40/499] 	 train loss: 1.071664 	 lr: 0.00100
+[epoch   2:  60/499] 	 train loss: 1.158709 	 lr: 0.00100
+[epoch   2:  80/499] 	 train loss: 1.155558 	 lr: 0.00100
+[epoch   2: 100/499] 	 train loss: 0.927114 	 lr: 0.00100
+[epoch   2: 120/499] 	 train loss: 1.014403 	 lr: 0.00100
+[epoch   2: 140/499] 	 train loss: 0.932529 	 lr: 0.00100
+[epoch   2: 160/499] 	 train loss: 0.966170 	 lr: 0.00100
+[epoch   2: 180/499] 	 train loss: 0.901054 	 lr: 0.00100
+****** Airplane: 0.101906
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.322552
+****** Laptop: 0.000000
+****** Motorbike: 0.055556
+****** Mug: 0.026316
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.215054
+****** Table: 0.221305
+************ Test Loss: 105.773657
+************ Class_mIoU: 0.083860
+************ Instance_mIoU: 0.168551
+[epoch   2: 200/499] 	 train loss: 0.971179 	 lr: 0.00100
+[epoch   2: 220/499] 	 train loss: 1.050030 	 lr: 0.00100
+[epoch   2: 240/499] 	 train loss: 1.082653 	 lr: 0.00100
+[epoch   2: 260/499] 	 train loss: 1.034771 	 lr: 0.00100
+[epoch   2: 280/499] 	 train loss: 1.035536 	 lr: 0.00100
+[epoch   2: 300/499] 	 train loss: 1.045936 	 lr: 0.00100
+[epoch   2: 320/499] 	 train loss: 1.033177 	 lr: 0.00100
+[epoch   2: 340/499] 	 train loss: 1.000526 	 lr: 0.00100
+[epoch   2: 360/499] 	 train loss: 1.001991 	 lr: 0.00100
+[epoch   2: 380/499] 	 train loss: 1.002934 	 lr: 0.00100
+[epoch   2: 400/499] 	 train loss: 0.864133 	 lr: 0.00100
+[epoch   2: 420/499] 	 train loss: 1.114492 	 lr: 0.00100
+[epoch   2: 440/499] 	 train loss: 0.945460 	 lr: 0.00100
+[epoch   2: 460/499] 	 train loss: 0.988931 	 lr: 0.00100
+[epoch   2: 480/499] 	 train loss: 0.924256 	 lr: 0.00100
+[epoch   3:   0/499] 	 train loss: 0.947758 	 lr: 0.00100
+[epoch   3:  20/499] 	 train loss: 0.937203 	 lr: 0.00100
+[epoch   3:  40/499] 	 train loss: 0.930191 	 lr: 0.00100
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.208097
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.322552
+****** Laptop: 0.000000
+****** Motorbike: 0.052288
+****** Mug: 0.026316
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.215054
+****** Table: 0.234670
+************ Test Loss: 93.543367
+************ Class_mIoU: 0.084379
+************ Instance_mIoU: 0.172089
+[epoch   3:  60/499] 	 train loss: 0.966487 	 lr: 0.00100
+[epoch   3:  80/499] 	 train loss: 0.891845 	 lr: 0.00100
+[epoch   3: 100/499] 	 train loss: 0.992278 	 lr: 0.00100
+[epoch   3: 120/499] 	 train loss: 0.986376 	 lr: 0.00100

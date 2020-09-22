@@ -24,7 +24,7 @@ def pc_normalize(pc):
     dist = np.max(np.sqrt(np.sum(pc**2, axis=1)))
     pc = pc / dist
     return pc
-    
+
 class ModelNet40Cls(data.Dataset):
 
     def __init__(
@@ -36,8 +36,8 @@ class ModelNet40Cls(data.Dataset):
 
         root = os.path.abspath(root)
         self.folder = "modelnet40_ply_hdf5_2048"
-        self.data_dir = os.path.join(root, self.folder)
-
+        self.data_dir = root
+        print(self.data_dir)
         self.train, self.num_points = train, num_points
         if self.train:
             self.files =  _get_data_files( \
@@ -48,7 +48,8 @@ class ModelNet40Cls(data.Dataset):
 
         point_list, label_list = [], []
         for f in self.files:
-            points, labels = _load_data_file(os.path.join(root, f))
+            print(f)
+            points, labels = _load_data_file(os.path.join(self.data_dir,f))
             points = pc_normalize(points)
             point_list.append(points)
             label_list.append(labels)
@@ -61,13 +62,13 @@ class ModelNet40Cls(data.Dataset):
         pt_idxs = np.arange(0, self.points.shape[1])   # 2048
         if self.train:
             np.random.shuffle(pt_idxs)
-        
+
         current_points = self.points[idx, pt_idxs].copy()
         label = torch.from_numpy(self.labels[idx]).type(torch.LongTensor)
-        
+
         if self.transforms is not None:
             current_points = self.transforms(current_points)
-        
+
         return current_points, label
 
     def __len__(self):

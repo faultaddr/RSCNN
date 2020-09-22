@@ -29,4 +29,4 @@ common:
     
     checkpoint: ''        # the model to start from
     save_path: seg
-    data_root: $data_root$
+    data_root: '/media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal'

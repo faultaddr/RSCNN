@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "train_cls.py", line 10, in <module>
+    from models import RSCNN_SSN_Cls as RSCNN_SSN
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/models/__init__.py", line 2, in <module>
+    from .rscnn_msn_seg import RSCNN_MSN as RSCNN_MSN_Seg
+ModuleNotFoundError: No module named 'models.rscnn_msn_seg'
