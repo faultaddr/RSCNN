@@ -1,0 +1,60 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.01
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 50
+
+[epochs]: 500
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+[epoch   1] 	 train loss: 1.289494 	 lr: 0.01000
+[epoch   2] 	 train loss: 0.919075 	 lr: 0.01000
+[epoch   3] 	 train loss: 0.905249 	 lr: 0.01000
+[epoch   4] 	 train loss: 0.899853 	 lr: 0.01000
+[epoch   5] 	 train loss: 0.895810 	 lr: 0.01000
+[epoch   6] 	 train loss: 0.891951 	 lr: 0.01000
+[epoch   7] 	 train loss: 0.891470 	 lr: 0.01000
+[epoch   8] 	 train loss: 0.889670 	 lr: 0.01000
+[epoch   9] 	 train loss: 0.886892 	 lr: 0.01000
+[epoch  10] 	 train loss: 0.883489 	 lr: 0.01000
+[epoch  11] 	 train loss: 0.881902 	 lr: 0.01000

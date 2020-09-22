@@ -5,11 +5,11 @@ common:
     num_classes: 50
     batch_size: 28
     
-    base_lr: 0.001
+    base_lr: 0.1
     lr_clip: 0.00001
     lr_decay: 0.5
-    decay_step: 21
-    epochs: 200
+    decay_step: 50
+    epochs: 500
 
     weight_decay: 0
     bn_momentum: 0.9
@@ -17,7 +17,7 @@ common:
     bn_decay: 0.5
     
     evaluate: 1           # validation in training process
-    val_freq_epoch: 0.7   # frequency in epoch for validation, can be decimal
+    val_freq_epoch:  10   # frequency in epoch for validation, can be decimal
     print_freq_iter: 20   # frequency in iteration for printing infomation
     
     input_channels: 0     # feature channels except (x, y, z)

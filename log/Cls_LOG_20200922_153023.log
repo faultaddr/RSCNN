@@ -1,0 +1,9 @@
+Traceback (most recent call last):
+  File "train_cls.py", line 10, in <module>
+    from models import RSCNN_SSN_Cls as RSCNN_SSN
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/models/__init__.py", line 1, in <module>
+    from .rscnn_ssn_cls import RSCNN_SSN as RSCNN_SSN_Cls
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/models/rscnn_ssn_cls.py", line 82
+    def forward(self, pointcloud: torch.cuda.FloatTensor):
+                                ^
+SyntaxError: invalid syntax

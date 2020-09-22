@@ -48,11 +48,12 @@ def main():
 
     train_transforms = transforms.Compose([
         d_utils.PointcloudToTensor(),
-        d_utils.PointcloudScaleAndTranslate(),
-        d_utils.PointcloudRandomInputDropout()
+        d_utils.PointcloudScaleAndTranslate()
+        # d_utils.PointcloudRandomInputDropout()
     ])
     test_transforms = transforms.Compose([
-        d_utils.PointcloudToTensor()
+        d_utils.PointcloudToTensor(),
+        # d_utils.PointcloudScaleAndTranslate()
     ])
 
     train_dataset = ShapeNetPart(root = args.data_root, num_points = args.num_points, split = 'trainval', normalize = True, transforms = train_transforms)
@@ -96,12 +97,13 @@ def main():
 
 
 def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_scheduler, bnm_scheduler, args, num_batch):
-    PointcloudScaleAndTranslate = d_utils.PointcloudScaleAndTranslate()   # initialize augmentation
+    #PointcloudScaleAndTranslate = d_utils.PointcloudScaleAndTranslate()   # initialize augmentation
     global Class_mIoU, Inst_mIoU
     Class_mIoU, Inst_mIoU = 0.83, 0.85
     batch_count = 0
     model.train()
     for epoch in range(args.epochs):
+        loss_avg=[]
         for i, data in enumerate(train_dataloader, 0):
             # if lr_scheduler is not None:
             #     lr_scheduler.step(epoch)
@@ -118,22 +120,24 @@ def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_sch
             batch_one_hot_cls = np.zeros((len(cls), 16))   # 16 object classes
             for b in range(len(cls)):
                 batch_one_hot_cls[b, int(cls[b])] = 1
-            batch_one_hot_cls = torch.from_numpy(batch_one_hot_cls)
-            batch_one_hot_cls = Variable(batch_one_hot_cls.float().cuda())
+            batch_one_hot_cls = torch.from_numpy(batch_one_hot_cls).float().cuda()
+            # batch_one_hot_cls = Variable(batch_one_hot_cls.float().cuda())
             pred = model(points, batch_one_hot_cls)
             pred = pred.view(-1, args.num_classes)
             target = target.view(-1,1)[:,0]
             loss = criterion(pred, target)
+            loss_avg.append(loss.item())
             loss.backward()
             optimizer.step()
 
-            if i % args.print_freq_iter == 0:
-                print('[epoch %3d: %3d/%3d] \t train loss: %0.6f \t lr: %0.5f' %(epoch+1, i, num_batch, loss.data.clone(), lr_scheduler.get_lr()[0]))
+            # if i % args.print_freq_iter == 0:
+            #     print('[epoch %3d: %3d/%3d] \t train loss: %0.6f \t lr: %0.5f' %(epoch+1, i, num_batch, loss.item(), lr_scheduler.get_lr()[0]))
             batch_count += 1
 
             # validation in between an epoch
-            if (epoch < 3 or epoch > 40) and args.evaluate and batch_count % int(args.val_freq_epoch * num_batch) == 0:
+            if args.evaluate and batch_count % int(args.val_freq_epoch * num_batch) == 0:
                 validate(test_dataloader, model, criterion, args, batch_count)
+        print('[epoch %3d] \t train loss: %0.6f \t lr: %0.5f' %(epoch+1,np.array(loss_avg).mean(),lr_scheduler.get_lr()[0]))
         if lr_scheduler is not None:
             lr_scheduler.step(epoch)
 
@@ -163,8 +167,8 @@ def validate(test_dataloader, model, criterion, args, iter):
             pred = model(points, batch_one_hot_cls)
             loss = criterion(pred.view(-1, args.num_classes), target.view(-1,1)[:,0])
             losses.append(loss.item())
-            pred = pred.data.cpu()
-            target = target.data.cpu()
+            pred = pred.item()
+            target = target.item()
             pred_val = torch.zeros(len(cls), args.num_points).type(torch.LongTensor)
             # pred to the groundtruth classes (selected by seg_classes[cat])
             for b in range(len(cls)):
@@ -173,16 +177,16 @@ def validate(test_dataloader, model, criterion, args, iter):
                 pred_val[b, :] = logits[:, seg_classes[cat]].max(1)[1] + seg_classes[cat][0]
 
             for b in range(len(cls)):
-                segp = pred_val[b, :]
-                segl = target[b, :]
-                cat = seg_label_to_cat[int(segl[0].numpy())]
+                segp = pred_val[b, :].numpy()
+                segl = target[b, :].numpy()
+                cat = seg_label_to_cat[segl[0]]
                 part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
                 for l in seg_classes[cat]:
-                    if torch.sum((segl == l) | (segp == l)) == 0:
+                    if np.sum((segl == l) | (segp == l)) == 0:
                         # part is not present in this shape
                         part_ious[l - seg_classes[cat][0]] = 1.0
                     else:
-                        part_ious[l - seg_classes[cat][0]] = torch.sum((segl == l) & (segp == l)) / float(torch.sum((segl == l) | (segp == l)))
+                        part_ious[l - seg_classes[cat][0]] = np.sum((segl == l) & (segp == l)) / float(np.sum((segl == l) | (segp == l)))
                 shape_ious[cat].append(np.mean(part_ious))
 
     instance_ious = []
@@ -204,7 +208,7 @@ def validate(test_dataloader, model, criterion, args, iter):
         if np.mean(instance_ious) > Inst_mIoU:
             Inst_mIoU = np.mean(instance_ious)
         torch.save(model.state_dict(), '%s/seg_msn_iter_%d_ins_%0.6f_cls_%0.6f.pth' % (args.save_path, iter, np.mean(instance_ious), mean_class_ious))
-    model.train()
+    #model.train()
 
 if __name__ == "__main__":
     main()

@@ -1,0 +1,190 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.01
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 50
+
+[epochs]: 500
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+[epoch   1:   0/499] 	 train loss: 5.008101 	 lr: 0.01000
+[epoch   1:  20/499] 	 train loss: 2.955431 	 lr: 0.01000
+[epoch   1:  40/499] 	 train loss: 2.236214 	 lr: 0.01000
+[epoch   1:  60/499] 	 train loss: 2.274222 	 lr: 0.01000
+[epoch   1:  80/499] 	 train loss: 2.276552 	 lr: 0.01000
+[epoch   1: 100/499] 	 train loss: 1.837623 	 lr: 0.01000
+[epoch   1: 120/499] 	 train loss: 1.195701 	 lr: 0.01000
+[epoch   1: 140/499] 	 train loss: 1.074716 	 lr: 0.01000
+[epoch   1: 160/499] 	 train loss: 0.959612 	 lr: 0.01000
+[epoch   1: 180/499] 	 train loss: 0.883729 	 lr: 0.01000
+[epoch   1: 200/499] 	 train loss: 0.864292 	 lr: 0.01000
+[epoch   1: 220/499] 	 train loss: 0.829507 	 lr: 0.01000
+[epoch   1: 240/499] 	 train loss: 0.867180 	 lr: 0.01000
+[epoch   1: 260/499] 	 train loss: 0.903605 	 lr: 0.01000
+[epoch   1: 280/499] 	 train loss: 0.873575 	 lr: 0.01000
+[epoch   1: 300/499] 	 train loss: 0.898210 	 lr: 0.01000
+[epoch   1: 320/499] 	 train loss: 0.868085 	 lr: 0.01000
+[epoch   1: 340/499] 	 train loss: 0.879851 	 lr: 0.01000
+[epoch   1: 360/499] 	 train loss: 0.970598 	 lr: 0.01000
+[epoch   1: 380/499] 	 train loss: 0.927348 	 lr: 0.01000
+[epoch   1: 400/499] 	 train loss: 1.037490 	 lr: 0.01000
+[epoch   1: 420/499] 	 train loss: 1.063811 	 lr: 0.01000
+[epoch   1: 440/499] 	 train loss: 0.961454 	 lr: 0.01000
+[epoch   1: 460/499] 	 train loss: 0.829500 	 lr: 0.01000
+[epoch   1: 480/499] 	 train loss: 1.003358 	 lr: 0.01000
+[epoch   2:   0/499] 	 train loss: 0.878620 	 lr: 0.01000
+[epoch   2:  20/499] 	 train loss: 0.891210 	 lr: 0.01000
+[epoch   2:  40/499] 	 train loss: 0.855479 	 lr: 0.01000
+[epoch   2:  60/499] 	 train loss: 0.997082 	 lr: 0.01000
+[epoch   2:  80/499] 	 train loss: 0.882719 	 lr: 0.01000
+[epoch   2: 100/499] 	 train loss: 0.888836 	 lr: 0.01000
+[epoch   2: 120/499] 	 train loss: 1.032160 	 lr: 0.01000
+[epoch   2: 140/499] 	 train loss: 0.828875 	 lr: 0.01000
+[epoch   2: 160/499] 	 train loss: 0.949928 	 lr: 0.01000
+[epoch   2: 180/499] 	 train loss: 0.970365 	 lr: 0.01000
+[epoch   2: 200/499] 	 train loss: 0.911407 	 lr: 0.01000
+[epoch   2: 220/499] 	 train loss: 0.871041 	 lr: 0.01000
+[epoch   2: 240/499] 	 train loss: 0.867450 	 lr: 0.01000
+[epoch   2: 260/499] 	 train loss: 0.958303 	 lr: 0.01000
+[epoch   2: 280/499] 	 train loss: 0.921016 	 lr: 0.01000
+[epoch   2: 300/499] 	 train loss: 0.924306 	 lr: 0.01000
+[epoch   2: 320/499] 	 train loss: 0.915652 	 lr: 0.01000
+[epoch   2: 340/499] 	 train loss: 0.997730 	 lr: 0.01000
+[epoch   2: 360/499] 	 train loss: 1.035846 	 lr: 0.01000
+[epoch   2: 380/499] 	 train loss: 0.959961 	 lr: 0.01000
+[epoch   2: 400/499] 	 train loss: 0.859699 	 lr: 0.01000
+[epoch   2: 420/499] 	 train loss: 0.903850 	 lr: 0.01000
+[epoch   2: 440/499] 	 train loss: 0.996182 	 lr: 0.01000
+[epoch   2: 460/499] 	 train loss: 0.891452 	 lr: 0.01000
+[epoch   2: 480/499] 	 train loss: 0.838018 	 lr: 0.01000
+[epoch   3:   0/499] 	 train loss: 0.869059 	 lr: 0.01000
+[epoch   3:  20/499] 	 train loss: 0.837094 	 lr: 0.01000
+[epoch   3:  40/499] 	 train loss: 0.943347 	 lr: 0.01000
+[epoch   3:  60/499] 	 train loss: 0.811211 	 lr: 0.01000
+[epoch   3:  80/499] 	 train loss: 0.946367 	 lr: 0.01000
+[epoch   3: 100/499] 	 train loss: 1.052602 	 lr: 0.01000
+[epoch   3: 120/499] 	 train loss: 0.957277 	 lr: 0.01000
+[epoch   3: 140/499] 	 train loss: 0.903717 	 lr: 0.01000
+[epoch   3: 160/499] 	 train loss: 0.976289 	 lr: 0.01000
+[epoch   3: 180/499] 	 train loss: 0.881452 	 lr: 0.01000
+[epoch   3: 200/499] 	 train loss: 0.859897 	 lr: 0.01000
+[epoch   3: 220/499] 	 train loss: 0.899935 	 lr: 0.01000
+[epoch   3: 240/499] 	 train loss: 0.863499 	 lr: 0.01000
+[epoch   3: 260/499] 	 train loss: 0.836772 	 lr: 0.01000
+[epoch   3: 280/499] 	 train loss: 0.910922 	 lr: 0.01000
+[epoch   3: 300/499] 	 train loss: 0.859555 	 lr: 0.01000
+[epoch   3: 320/499] 	 train loss: 0.951035 	 lr: 0.01000
+[epoch   3: 340/499] 	 train loss: 0.906775 	 lr: 0.01000
+[epoch   3: 360/499] 	 train loss: 0.992777 	 lr: 0.01000
+[epoch   3: 380/499] 	 train loss: 0.915464 	 lr: 0.01000
+[epoch   3: 400/499] 	 train loss: 0.939212 	 lr: 0.01000
+[epoch   3: 420/499] 	 train loss: 0.811967 	 lr: 0.01000
+[epoch   3: 440/499] 	 train loss: 0.890794 	 lr: 0.01000
+[epoch   3: 460/499] 	 train loss: 0.783649 	 lr: 0.01000
+[epoch   3: 480/499] 	 train loss: 0.927337 	 lr: 0.01000
+[epoch   4:   0/499] 	 train loss: 0.904100 	 lr: 0.01000
+[epoch   4:  20/499] 	 train loss: 0.925232 	 lr: 0.01000
+[epoch   4:  40/499] 	 train loss: 0.930429 	 lr: 0.01000
+[epoch   4:  60/499] 	 train loss: 0.930685 	 lr: 0.01000
+[epoch   4:  80/499] 	 train loss: 0.764442 	 lr: 0.01000
+[epoch   4: 100/499] 	 train loss: 0.764560 	 lr: 0.01000
+[epoch   4: 120/499] 	 train loss: 0.860450 	 lr: 0.01000
+[epoch   4: 140/499] 	 train loss: 0.785131 	 lr: 0.01000
+[epoch   4: 160/499] 	 train loss: 0.883347 	 lr: 0.01000
+[epoch   4: 180/499] 	 train loss: 0.962779 	 lr: 0.01000
+[epoch   4: 200/499] 	 train loss: 0.836358 	 lr: 0.01000
+[epoch   4: 220/499] 	 train loss: 0.942547 	 lr: 0.01000
+[epoch   4: 240/499] 	 train loss: 0.963612 	 lr: 0.01000
+[epoch   4: 260/499] 	 train loss: 0.857712 	 lr: 0.01000
+[epoch   4: 280/499] 	 train loss: 0.909974 	 lr: 0.01000
+[epoch   4: 300/499] 	 train loss: 0.973497 	 lr: 0.01000
+[epoch   4: 320/499] 	 train loss: 0.980169 	 lr: 0.01000
+[epoch   4: 340/499] 	 train loss: 0.788608 	 lr: 0.01000
+[epoch   4: 360/499] 	 train loss: 0.948067 	 lr: 0.01000
+[epoch   4: 380/499] 	 train loss: 0.927659 	 lr: 0.01000
+[epoch   4: 400/499] 	 train loss: 0.845772 	 lr: 0.01000
+[epoch   4: 420/499] 	 train loss: 0.966851 	 lr: 0.01000
+[epoch   4: 440/499] 	 train loss: 0.887979 	 lr: 0.01000
+[epoch   4: 460/499] 	 train loss: 0.840988 	 lr: 0.01000
+[epoch   4: 480/499] 	 train loss: 0.832862 	 lr: 0.01000
+[epoch   5:   0/499] 	 train loss: 0.868375 	 lr: 0.01000
+[epoch   5:  20/499] 	 train loss: 0.975496 	 lr: 0.01000
+[epoch   5:  40/499] 	 train loss: 0.855817 	 lr: 0.01000
+[epoch   5:  60/499] 	 train loss: 0.920937 	 lr: 0.01000
+[epoch   5:  80/499] 	 train loss: 0.944572 	 lr: 0.01000
+[epoch   5: 100/499] 	 train loss: 0.875233 	 lr: 0.01000
+[epoch   5: 120/499] 	 train loss: 0.834825 	 lr: 0.01000
+[epoch   5: 140/499] 	 train loss: 0.806318 	 lr: 0.01000
+[epoch   5: 160/499] 	 train loss: 0.861039 	 lr: 0.01000
+[epoch   5: 180/499] 	 train loss: 0.982755 	 lr: 0.01000
+[epoch   5: 200/499] 	 train loss: 0.959724 	 lr: 0.01000
+[epoch   5: 220/499] 	 train loss: 0.896601 	 lr: 0.01000
+[epoch   5: 240/499] 	 train loss: 0.947534 	 lr: 0.01000
+[epoch   5: 260/499] 	 train loss: 0.817745 	 lr: 0.01000
+[epoch   5: 280/499] 	 train loss: 0.926661 	 lr: 0.01000
+[epoch   5: 300/499] 	 train loss: 0.971409 	 lr: 0.01000
+[epoch   5: 320/499] 	 train loss: 0.840630 	 lr: 0.01000
+[epoch   5: 340/499] 	 train loss: 0.816620 	 lr: 0.01000
+[epoch   5: 360/499] 	 train loss: 0.856727 	 lr: 0.01000
+[epoch   5: 380/499] 	 train loss: 0.996910 	 lr: 0.01000
+[epoch   5: 400/499] 	 train loss: 0.879355 	 lr: 0.01000
+[epoch   5: 420/499] 	 train loss: 1.003113 	 lr: 0.01000
+[epoch   5: 440/499] 	 train loss: 0.919123 	 lr: 0.01000
+[epoch   5: 460/499] 	 train loss: 0.811954 	 lr: 0.01000
+[epoch   5: 480/499] 	 train loss: 0.985199 	 lr: 0.01000
+[epoch   6:   0/499] 	 train loss: 0.895054 	 lr: 0.01000
+[epoch   6:  20/499] 	 train loss: 0.836412 	 lr: 0.01000
+[epoch   6:  40/499] 	 train loss: 0.980243 	 lr: 0.01000
+[epoch   6:  60/499] 	 train loss: 0.782067 	 lr: 0.01000
+[epoch   6:  80/499] 	 train loss: 0.789371 	 lr: 0.01000
+[epoch   6: 100/499] 	 train loss: 0.845457 	 lr: 0.01000
+[epoch   6: 120/499] 	 train loss: 0.835244 	 lr: 0.01000
+[epoch   6: 140/499] 	 train loss: 0.862055 	 lr: 0.01000
+[epoch   6: 160/499] 	 train loss: 0.964899 	 lr: 0.01000
+[epoch   6: 180/499] 	 train loss: 1.014951 	 lr: 0.01000
+[epoch   6: 200/499] 	 train loss: 0.883276 	 lr: 0.01000
+[epoch   6: 220/499] 	 train loss: 0.838605 	 lr: 0.01000
+[epoch   6: 240/499] 	 train loss: 0.843088 	 lr: 0.01000
+[epoch   6: 260/499] 	 train loss: 0.882755 	 lr: 0.01000
+[epoch   6: 280/499] 	 train loss: 0.816461 	 lr: 0.01000
+[epoch   6: 300/499] 	 train loss: 0.890459 	 lr: 0.01000

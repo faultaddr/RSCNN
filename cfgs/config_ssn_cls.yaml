@@ -1,15 +1,15 @@
 common:
-    workers: 4
+    workers: 6
 
     num_points: 1024
     num_classes: 40
-    batch_size: 128
+    batch_size: 256
     
     base_lr: 0.001
     lr_clip: 0.00001
     lr_decay: 0.7
     decay_step: 21
-    epochs: 120
+    epochs: 500
 
     weight_decay: 0.00001
     bn_momentum: 0.9
@@ -17,7 +17,7 @@ common:
     bn_decay: 0.5
     
     evaluate: 1
-    val_freq_epoch: 1   # frequency in epoch for validation, can be decimal
+    val_freq_epoch: 10   # frequency in epoch for validation, can be decimal
     print_freq_iter: 40   # frequency in iteration for printing infomation
     
     input_channels: 0     # feature channels except (x, y, z)
