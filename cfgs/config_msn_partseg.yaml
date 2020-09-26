@@ -3,13 +3,13 @@ common:
 
     num_points: 2048
     num_classes: 50
-    batch_size: 28
+    batch_size: 24
     
-    base_lr: 0.1
+    base_lr: 0.001
     lr_clip: 0.00001
     lr_decay: 0.5
-    decay_step: 50
-    epochs: 500
+    decay_step: 20
+    epochs: 200
 
     weight_decay: 0
     bn_momentum: 0.9

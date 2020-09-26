@@ -1,0 +1,77 @@
+train_cls.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 6
+
+[num_points]: 1024
+
+[num_classes]: 40
+
+[batch_size]: 256
+
+[base_lr]: 0.001
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.7
+
+[decay_step]: 21
+
+[epochs]: 500
+
+[weight_decay]: 1e-05
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 40
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: cls
+
+[data_root]: /media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+
+**************************
+
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_train0.h5
+/media/disk3/pyy/RSCNN_Pytorch1.0/data/ModelNet40Loader.py:14: H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x', 'a'. See the docs for details.
+  f = h5py.File(name)
+ply_data_train1.h5
+ply_data_train2.h5
+ply_data_train3.h5
+ply_data_train4.h5
+39
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_test0.h5
+ply_data_test1.h5
+39
+[epoch   1:   0/ 38] 	 train loss: 3.846115 	 lr: 0.00100
+[epoch   2:   0/ 38] 	 train loss: 3.300727 	 lr: 0.00100
+[epoch   3:   0/ 38] 	 train loss: 3.244142 	 lr: 0.00100
+[epoch   4:   0/ 38] 	 train loss: 3.132445 	 lr: 0.00100
+[epoch   5:   0/ 38] 	 train loss: 3.117537 	 lr: 0.00100
+[epoch   6:   0/ 38] 	 train loss: 3.112678 	 lr: 0.00100
+[epoch   7:   0/ 38] 	 train loss: 3.099622 	 lr: 0.00100
+[epoch   8:   0/ 38] 	 train loss: 3.031748 	 lr: 0.00100
+[epoch   9:   0/ 38] 	 train loss: 3.019619 	 lr: 0.00100
+[epoch  10:   0/ 38] 	 train loss: 3.008779 	 lr: 0.00100
+now evaluate...
+
+val loss: 31.350447 	 acc: 0.000000
+
+[epoch  11:   0/ 38] 	 train loss: 3.187258 	 lr: 0.00100

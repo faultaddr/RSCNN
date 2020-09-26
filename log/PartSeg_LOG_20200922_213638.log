@@ -1,0 +1,68 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.1
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 50
+
+[epochs]: 500
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+Traceback (most recent call last):
+  File "train_partseg.py", line 214, in <module>
+    main()
+  File "train_partseg.py", line 79, in main
+    model.cuda()
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 311, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 208, in _apply
+    module._apply(fn)
+  [Previous line repeated 4 more times]
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 230, in _apply
+    param_applied = fn(param)
+  File "/home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/nn/modules/module.py", line 311, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+RuntimeError: CUDA error: out of memory

@@ -1,0 +1,80 @@
+train_cls.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 6
+
+[num_points]: 1024
+
+[num_classes]: 40
+
+[batch_size]: 256
+
+[base_lr]: 0.001
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.7
+
+[decay_step]: 21
+
+[epochs]: 500
+
+[weight_decay]: 1e-05
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 40
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: cls
+
+[data_root]: /media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+
+**************************
+
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_train0.h5
+/media/disk3/pyy/RSCNN_Pytorch1.0/data/ModelNet40Loader.py:14: H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x', 'a'. See the docs for details.
+  f = h5py.File(name)
+ply_data_train1.h5
+ply_data_train2.h5
+ply_data_train3.h5
+ply_data_train4.h5
+39
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_test0.h5
+ply_data_test1.h5
+39
+Traceback (most recent call last):
+  File "train_cls.py", line 173, in <module>
+    main()
+  File "train_cls.py", line 91, in main
+    train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_scheduler, bnm_scheduler, args, num_batch)
+  File "train_cls.py", line 111, in train
+    fps_idx = pointnet2_utils.furthest_point_sample(points, 1200)  # (B, npoint)
+  File "/media/disk3/pyy/RSCNN_Pytorch1.0/utils/pointnet2_utils.py", line 73, in forward
+    return _ext.furthest_point_sampling(xyz, npoint)
+RuntimeError: CPU not supported (furthest_point_sampling at utils/_ext-src/src/sampling.cpp:82)
+frame #0: c10::Error::Error(c10::SourceLocation, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) + 0x6d (0x7ff1f93d41cd in /home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/lib/libc10.so)
+frame #1: furthest_point_sampling(at::Tensor, int) + 0x5dd (0x7ff1c99c579d in /media/disk3/pyy/RSCNN_Pytorch1.0/utils/_ext.cpython-36m-x86_64-linux-gnu.so)
+frame #2: <unknown function> + 0x2a361 (0x7ff1c99d7361 in /media/disk3/pyy/RSCNN_Pytorch1.0/utils/_ext.cpython-36m-x86_64-linux-gnu.so)
+frame #3: <unknown function> + 0x265d1 (0x7ff1c99d35d1 in /media/disk3/pyy/RSCNN_Pytorch1.0/utils/_ext.cpython-36m-x86_64-linux-gnu.so)
+<omitting python frames>
+frame #10: THPFunction_apply(_object*, _object*) + 0xa1e (0x7ff21bc961fe in /home/s/anaconda2/envs/t1/lib/python3.6/site-packages/torch/lib/libtorch_python.so)
+frame #28: __libc_start_main + 0xf0 (0x7ff22b439840 in /lib/x86_64-linux-gnu/libc.so.6)
+

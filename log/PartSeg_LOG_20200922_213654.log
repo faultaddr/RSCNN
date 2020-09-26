@@ -1,0 +1,309 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.1
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 50
+
+[epochs]: 500
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+****** Airplane: 0.101173
+****** Bag: 0.448783
+****** Cap: 0.312211
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.352272
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.066660
+****** Mug: 0.013158
+****** Pistol: 0.093783
+****** Rocket: 0.226481
+****** Skateboard: 0.071216
+****** Table: 0.231918
+************ Test Loss: 1.334681
+************ Class_mIoU: 0.156987
+************ Instance_mIoU: 0.176763
+[epoch   1] 	 train loss: 1.918841 	 lr: 0.10000
+****** Airplane: 0.101906
+****** Bag: 0.447597
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.350970
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.059302
+****** Mug: 0.013158
+****** Pistol: 0.017193
+****** Rocket: 0.226563
+****** Skateboard: 0.070874
+****** Table: 0.232994
+************ Test Loss: 8.086891
+************ Class_mIoU: 0.132168
+************ Instance_mIoU: 0.174654
+[epoch   2] 	 train loss: 1.405697 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.448626
+****** Cap: 0.288064
+****** Car: 0.064873
+****** Chair: 0.209517
+****** Earphone: 0.016706
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.320804
+****** Laptop: 0.000000
+****** Motorbike: 0.085322
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.227417
+****** Skateboard: 0.070775
+****** Table: 0.233884
+************ Test Loss: 5.073752
+************ Class_mIoU: 0.130493
+************ Instance_mIoU: 0.174713
+[epoch   3] 	 train loss: 1.343248 	 lr: 0.10000
+****** Airplane: 0.101906
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.013399
+****** Earphone: 0.198812
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.322552
+****** Laptop: 0.000000
+****** Motorbike: 0.053985
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.035007
+****** Skateboard: 0.161290
+****** Table: 0.235849
+************ Test Loss: 95.206566
+************ Class_mIoU: 0.075427
+************ Instance_mIoU: 0.124643
+[epoch   4] 	 train loss: 1.345091 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.203183
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.053893
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.161290
+****** Table: 0.232311
+************ Test Loss: 1.039841
+************ Class_mIoU: 0.085420
+************ Instance_mIoU: 0.171251
+[epoch   5] 	 train loss: 1.308304 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.065008
+****** Car: 0.063291
+****** Chair: 0.212113
+****** Earphone: 0.350284
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321953
+****** Laptop: 0.000000
+****** Motorbike: 0.016164
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.060805
+****** Skateboard: 0.186014
+****** Table: 0.232311
+************ Test Loss: 89.913416
+************ Class_mIoU: 0.101866
+************ Instance_mIoU: 0.172818
+[epoch   6] 	 train loss: 1.281862 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.064873
+****** Chair: 0.209162
+****** Earphone: 0.204927
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.053914
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.161290
+****** Table: 0.231918
+************ Test Loss: 65.360214
+************ Class_mIoU: 0.085604
+************ Instance_mIoU: 0.171231
+[epoch   7] 	 train loss: 1.277502 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.350458
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.168910
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.071981
+****** Skateboard: 0.161290
+****** Table: 0.233097
+************ Test Loss: 174.401535
+************ Class_mIoU: 0.106361
+************ Instance_mIoU: 0.174542
+[epoch   8] 	 train loss: 1.286107 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.064873
+****** Chair: 0.209162
+****** Earphone: 0.316046
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.008304
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.226820
+****** Skateboard: 0.161290
+****** Table: 0.233884
+************ Test Loss: 22.296346
+************ Class_mIoU: 0.103998
+************ Instance_mIoU: 0.172490
+[epoch   9] 	 train loss: 1.292676 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209517
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.011428
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.161290
+****** Table: 0.232704
+************ Test Loss: 6.913645
+************ Class_mIoU: 0.077554
+************ Instance_mIoU: 0.170291
+[epoch  10] 	 train loss: 1.302182 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.064873
+****** Chair: 0.209162
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.320804
+****** Laptop: 0.000000
+****** Motorbike: 0.008240
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.035007
+****** Skateboard: 0.161290
+****** Table: 0.232704
+************ Test Loss: 151.672124
+************ Class_mIoU: 0.079565
+************ Instance_mIoU: 0.170294
+[epoch  11] 	 train loss: 1.290578 	 lr: 0.10000
+****** Airplane: 0.102639
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.143834
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.323427
+****** Laptop: 0.000000
+****** Motorbike: 0.058241
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.074734
+****** Skateboard: 0.161290
+****** Table: 0.233884
+************ Test Loss: 905.876813
+************ Class_mIoU: 0.086952
+************ Instance_mIoU: 0.172163
+[epoch  12] 	 train loss: 1.297213 	 lr: 0.10000
+****** Airplane: 0.101173
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.064873
+****** Chair: 0.209162
+****** Earphone: 0.204020
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.320804
+****** Laptop: 0.000000
+****** Motorbike: 0.008178
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.161290
+****** Table: 0.235063
+************ Test Loss: 1.066148
+************ Class_mIoU: 0.082831
+************ Instance_mIoU: 0.171256
+[epoch  13] 	 train loss: 1.309849 	 lr: 0.10000

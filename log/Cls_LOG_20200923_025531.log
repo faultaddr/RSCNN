@@ -1,0 +1,762 @@
+train_cls.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 6
+
+[num_points]: 1024
+
+[num_classes]: 40
+
+[batch_size]: 256
+
+[base_lr]: 0.001
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.7
+
+[decay_step]: 21
+
+[epochs]: 500
+
+[weight_decay]: 1e-05
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 40
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: cls
+
+[data_root]: /media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+
+**************************
+
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_train0.h5
+/media/disk3/pyy/RSCNN_Pytorch1.0/data/ModelNet40Loader.py:14: H5pyDeprecationWarning: The default file mode will change to 'r' (read-only) in h5py 3.0. To suppress this warning, pass the mode you need to h5py.File(), or set the global default h5.get_config().default_file_mode, or set the environment variable H5PY_DEFAULT_READONLY=1. Available modes are: 'r', 'r+', 'w', 'w-'/'x', 'a'. See the docs for details.
+  f = h5py.File(name)
+ply_data_train1.h5
+ply_data_train2.h5
+ply_data_train3.h5
+ply_data_train4.h5
+39
+/media/disk3/pyy/RSCNN_Pytorch1.0/modelnet40_ply_hdf5_2048
+ply_data_test0.h5
+ply_data_test1.h5
+39
+[epoch   1:   0/ 38] 	 train loss: 3.895471 	 lr: 0.00100
+[epoch   2:   0/ 38] 	 train loss: 2.818462 	 lr: 0.00100
+[epoch   3:   0/ 38] 	 train loss: 2.378154 	 lr: 0.00100
+[epoch   4:   0/ 38] 	 train loss: 2.185568 	 lr: 0.00100
+[epoch   5:   0/ 38] 	 train loss: 2.040952 	 lr: 0.00100
+[epoch   6:   0/ 38] 	 train loss: 2.029585 	 lr: 0.00100
+[epoch   7:   0/ 38] 	 train loss: 1.941002 	 lr: 0.00100
+[epoch   8:   0/ 38] 	 train loss: 1.945688 	 lr: 0.00100
+[epoch   9:   0/ 38] 	 train loss: 1.738343 	 lr: 0.00100
+[epoch  10:   0/ 38] 	 train loss: 1.789361 	 lr: 0.00100
+now evaluate...
+
+val loss: 2.415705 	 acc: 0.290924
+
+[epoch  11:   0/ 38] 	 train loss: 1.589342 	 lr: 0.00100
+[epoch  12:   0/ 38] 	 train loss: 1.616911 	 lr: 0.00100
+[epoch  13:   0/ 38] 	 train loss: 1.584034 	 lr: 0.00100
+[epoch  14:   0/ 38] 	 train loss: 1.260717 	 lr: 0.00100
+[epoch  15:   0/ 38] 	 train loss: 1.563323 	 lr: 0.00100
+[epoch  16:   0/ 38] 	 train loss: 1.452610 	 lr: 0.00100
+[epoch  17:   0/ 38] 	 train loss: 1.356502 	 lr: 0.00100
+[epoch  18:   0/ 38] 	 train loss: 1.348646 	 lr: 0.00100
+[epoch  19:   0/ 38] 	 train loss: 1.424079 	 lr: 0.00100
+[epoch  20:   0/ 38] 	 train loss: 1.406472 	 lr: 0.00100
+now evaluate...
+
+val loss: 1.841614 	 acc: 0.464749
+
+[epoch  21:   0/ 38] 	 train loss: 1.347565 	 lr: 0.00100
+[epoch  22:   0/ 38] 	 train loss: 1.231890 	 lr: 0.00100
+[epoch  23:   0/ 38] 	 train loss: 1.255090 	 lr: 0.00070
+[epoch  24:   0/ 38] 	 train loss: 1.146903 	 lr: 0.00070
+[epoch  25:   0/ 38] 	 train loss: 1.251223 	 lr: 0.00070
+[epoch  26:   0/ 38] 	 train loss: 1.272497 	 lr: 0.00070
+[epoch  27:   0/ 38] 	 train loss: 1.224557 	 lr: 0.00070
+[epoch  28:   0/ 38] 	 train loss: 1.134968 	 lr: 0.00070
+[epoch  29:   0/ 38] 	 train loss: 1.309927 	 lr: 0.00070
+[epoch  30:   0/ 38] 	 train loss: 1.199219 	 lr: 0.00070
+now evaluate...
+
+val loss: 1.622495 	 acc: 0.511750
+
+[epoch  31:   0/ 38] 	 train loss: 1.290645 	 lr: 0.00070
+[epoch  32:   0/ 38] 	 train loss: 1.186337 	 lr: 0.00070
+[epoch  33:   0/ 38] 	 train loss: 1.179379 	 lr: 0.00070
+[epoch  34:   0/ 38] 	 train loss: 1.095244 	 lr: 0.00070
+[epoch  35:   0/ 38] 	 train loss: 1.159718 	 lr: 0.00070
+[epoch  36:   0/ 38] 	 train loss: 1.158849 	 lr: 0.00070
+[epoch  37:   0/ 38] 	 train loss: 1.065604 	 lr: 0.00070
+[epoch  38:   0/ 38] 	 train loss: 1.178501 	 lr: 0.00070
+[epoch  39:   0/ 38] 	 train loss: 1.080191 	 lr: 0.00070
+[epoch  40:   0/ 38] 	 train loss: 1.118871 	 lr: 0.00070
+now evaluate...
+
+val loss: 1.494414 	 acc: 0.545381
+
+[epoch  41:   0/ 38] 	 train loss: 1.084988 	 lr: 0.00070
+[epoch  42:   0/ 38] 	 train loss: 1.219422 	 lr: 0.00070
+[epoch  43:   0/ 38] 	 train loss: 1.111661 	 lr: 0.00070
+[epoch  44:   0/ 38] 	 train loss: 1.169435 	 lr: 0.00049
+[epoch  45:   0/ 38] 	 train loss: 1.120195 	 lr: 0.00049
+[epoch  46:   0/ 38] 	 train loss: 0.975130 	 lr: 0.00049
+[epoch  47:   0/ 38] 	 train loss: 1.124640 	 lr: 0.00049
+[epoch  48:   0/ 38] 	 train loss: 1.015466 	 lr: 0.00049
+[epoch  49:   0/ 38] 	 train loss: 0.959914 	 lr: 0.00049
+[epoch  50:   0/ 38] 	 train loss: 0.908147 	 lr: 0.00049
+now evaluate...
+
+val loss: 1.355310 	 acc: 0.581037
+
+[epoch  51:   0/ 38] 	 train loss: 1.033099 	 lr: 0.00049
+[epoch  52:   0/ 38] 	 train loss: 1.046076 	 lr: 0.00049
+[epoch  53:   0/ 38] 	 train loss: 0.909591 	 lr: 0.00049
+[epoch  54:   0/ 38] 	 train loss: 1.077434 	 lr: 0.00049
+[epoch  55:   0/ 38] 	 train loss: 1.059284 	 lr: 0.00049
+[epoch  56:   0/ 38] 	 train loss: 0.923599 	 lr: 0.00049
+[epoch  57:   0/ 38] 	 train loss: 1.061324 	 lr: 0.00049
+[epoch  58:   0/ 38] 	 train loss: 0.980719 	 lr: 0.00049
+[epoch  59:   0/ 38] 	 train loss: 1.080930 	 lr: 0.00049
+[epoch  60:   0/ 38] 	 train loss: 1.068155 	 lr: 0.00049
+now evaluate...
+
+val loss: 1.359730 	 acc: 0.589141
+
+[epoch  61:   0/ 38] 	 train loss: 0.920345 	 lr: 0.00049
+[epoch  62:   0/ 38] 	 train loss: 0.926179 	 lr: 0.00049
+[epoch  63:   0/ 38] 	 train loss: 1.012895 	 lr: 0.00049
+[epoch  64:   0/ 38] 	 train loss: 1.039170 	 lr: 0.00049
+[epoch  65:   0/ 38] 	 train loss: 1.003384 	 lr: 0.00034
+[epoch  66:   0/ 38] 	 train loss: 1.074590 	 lr: 0.00034
+[epoch  67:   0/ 38] 	 train loss: 0.985000 	 lr: 0.00034
+[epoch  68:   0/ 38] 	 train loss: 0.969465 	 lr: 0.00034
+[epoch  69:   0/ 38] 	 train loss: 1.025606 	 lr: 0.00034
+now evaluate...
+
+val loss: 1.282472 	 acc: 0.611831
+
+[epoch  70:   0/ 38] 	 train loss: 0.965382 	 lr: 0.00034
+[epoch  71:   0/ 38] 	 train loss: 1.076311 	 lr: 0.00034
+[epoch  72:   0/ 38] 	 train loss: 0.921378 	 lr: 0.00034
+[epoch  73:   0/ 38] 	 train loss: 0.985794 	 lr: 0.00034
+[epoch  74:   0/ 38] 	 train loss: 1.049350 	 lr: 0.00034
+[epoch  75:   0/ 38] 	 train loss: 0.983465 	 lr: 0.00034
+[epoch  76:   0/ 38] 	 train loss: 0.965698 	 lr: 0.00034
+[epoch  77:   0/ 38] 	 train loss: 0.946623 	 lr: 0.00034
+[epoch  78:   0/ 38] 	 train loss: 1.038359 	 lr: 0.00034
+[epoch  79:   0/ 38] 	 train loss: 0.857750 	 lr: 0.00034
+now evaluate...
+
+val loss: 1.319106 	 acc: 0.593598
+
+[epoch  80:   0/ 38] 	 train loss: 0.934967 	 lr: 0.00034
+[epoch  81:   0/ 38] 	 train loss: 0.801997 	 lr: 0.00034
+[epoch  82:   0/ 38] 	 train loss: 0.907505 	 lr: 0.00034
+[epoch  83:   0/ 38] 	 train loss: 0.930260 	 lr: 0.00034
+[epoch  84:   0/ 38] 	 train loss: 1.072918 	 lr: 0.00034
+[epoch  85:   0/ 38] 	 train loss: 1.060022 	 lr: 0.00034
+[epoch  86:   0/ 38] 	 train loss: 1.057112 	 lr: 0.00024
+[epoch  87:   0/ 38] 	 train loss: 0.917592 	 lr: 0.00024
+[epoch  88:   0/ 38] 	 train loss: 0.841684 	 lr: 0.00024
+[epoch  89:   0/ 38] 	 train loss: 0.814580 	 lr: 0.00024
+now evaluate...
+
+val loss: 1.271921 	 acc: 0.610211
+
+[epoch  90:   0/ 38] 	 train loss: 0.813099 	 lr: 0.00024
+[epoch  91:   0/ 38] 	 train loss: 0.913305 	 lr: 0.00024
+[epoch  92:   0/ 38] 	 train loss: 0.964541 	 lr: 0.00024
+[epoch  93:   0/ 38] 	 train loss: 0.825539 	 lr: 0.00024
+[epoch  94:   0/ 38] 	 train loss: 1.036816 	 lr: 0.00024
+[epoch  95:   0/ 38] 	 train loss: 0.925455 	 lr: 0.00024
+[epoch  96:   0/ 38] 	 train loss: 0.833409 	 lr: 0.00024
+[epoch  97:   0/ 38] 	 train loss: 0.902847 	 lr: 0.00024
+[epoch  98:   0/ 38] 	 train loss: 0.947208 	 lr: 0.00024
+[epoch  99:   0/ 38] 	 train loss: 0.770272 	 lr: 0.00024
+now evaluate...
+
+val loss: 1.273575 	 acc: 0.606159
+
+[epoch 100:   0/ 38] 	 train loss: 0.755411 	 lr: 0.00024
+[epoch 101:   0/ 38] 	 train loss: 0.784172 	 lr: 0.00024
+[epoch 102:   0/ 38] 	 train loss: 0.787334 	 lr: 0.00024
+[epoch 103:   0/ 38] 	 train loss: 0.806468 	 lr: 0.00024
+[epoch 104:   0/ 38] 	 train loss: 0.874290 	 lr: 0.00024
+[epoch 105:   0/ 38] 	 train loss: 0.953343 	 lr: 0.00024
+[epoch 106:   0/ 38] 	 train loss: 0.897731 	 lr: 0.00024
+[epoch 107:   0/ 38] 	 train loss: 1.026113 	 lr: 0.00017
+[epoch 108:   0/ 38] 	 train loss: 0.840195 	 lr: 0.00017
+[epoch 109:   0/ 38] 	 train loss: 0.864092 	 lr: 0.00017
+now evaluate...
+
+val loss: 1.233234 	 acc: 0.622771
+
+[epoch 110:   0/ 38] 	 train loss: 0.977818 	 lr: 0.00017
+[epoch 111:   0/ 38] 	 train loss: 0.852545 	 lr: 0.00017
+[epoch 112:   0/ 38] 	 train loss: 0.866474 	 lr: 0.00017
+[epoch 113:   0/ 38] 	 train loss: 0.992692 	 lr: 0.00017
+[epoch 114:   0/ 38] 	 train loss: 0.963488 	 lr: 0.00017
+[epoch 115:   0/ 38] 	 train loss: 0.787359 	 lr: 0.00017
+[epoch 116:   0/ 38] 	 train loss: 0.869679 	 lr: 0.00017
+[epoch 117:   0/ 38] 	 train loss: 0.903691 	 lr: 0.00017
+[epoch 118:   0/ 38] 	 train loss: 0.864881 	 lr: 0.00017
+[epoch 119:   0/ 38] 	 train loss: 0.883135 	 lr: 0.00017
+now evaluate...
+
+val loss: 1.220575 	 acc: 0.615883
+
+[epoch 120:   0/ 38] 	 train loss: 0.861987 	 lr: 0.00017
+[epoch 121:   0/ 38] 	 train loss: 0.835969 	 lr: 0.00017
+[epoch 122:   0/ 38] 	 train loss: 0.903702 	 lr: 0.00017
+[epoch 123:   0/ 38] 	 train loss: 0.827312 	 lr: 0.00017
+[epoch 124:   0/ 38] 	 train loss: 0.951702 	 lr: 0.00017
+[epoch 125:   0/ 38] 	 train loss: 0.938065 	 lr: 0.00017
+[epoch 126:   0/ 38] 	 train loss: 0.861368 	 lr: 0.00017
+[epoch 127:   0/ 38] 	 train loss: 0.840997 	 lr: 0.00017
+[epoch 128:   0/ 38] 	 train loss: 0.795790 	 lr: 0.00012
+now evaluate...
+
+val loss: 1.192202 	 acc: 0.631280
+
+[epoch 129:   0/ 38] 	 train loss: 0.911623 	 lr: 0.00012
+[epoch 130:   0/ 38] 	 train loss: 0.901777 	 lr: 0.00012
+[epoch 131:   0/ 38] 	 train loss: 0.740627 	 lr: 0.00012
+[epoch 132:   0/ 38] 	 train loss: 0.793625 	 lr: 0.00012
+[epoch 133:   0/ 38] 	 train loss: 0.684046 	 lr: 0.00012
+[epoch 134:   0/ 38] 	 train loss: 0.945388 	 lr: 0.00012
+[epoch 135:   0/ 38] 	 train loss: 0.714376 	 lr: 0.00012
+[epoch 136:   0/ 38] 	 train loss: 1.058970 	 lr: 0.00012
+[epoch 137:   0/ 38] 	 train loss: 0.772495 	 lr: 0.00012
+[epoch 138:   0/ 38] 	 train loss: 0.825095 	 lr: 0.00012
+now evaluate...
+
+val loss: 1.165073 	 acc: 0.627229
+
+[epoch 139:   0/ 38] 	 train loss: 0.981702 	 lr: 0.00012
+[epoch 140:   0/ 38] 	 train loss: 0.851654 	 lr: 0.00012
+[epoch 141:   0/ 38] 	 train loss: 0.814126 	 lr: 0.00012
+[epoch 142:   0/ 38] 	 train loss: 0.863606 	 lr: 0.00012
+[epoch 143:   0/ 38] 	 train loss: 0.872309 	 lr: 0.00012
+[epoch 144:   0/ 38] 	 train loss: 0.917544 	 lr: 0.00012
+[epoch 145:   0/ 38] 	 train loss: 0.796662 	 lr: 0.00012
+[epoch 146:   0/ 38] 	 train loss: 0.841921 	 lr: 0.00012
+[epoch 147:   0/ 38] 	 train loss: 0.872319 	 lr: 0.00012
+[epoch 148:   0/ 38] 	 train loss: 0.916640 	 lr: 0.00012
+now evaluate...
+
+val loss: 1.132355 	 acc: 0.645867
+
+[epoch 149:   0/ 38] 	 train loss: 1.006376 	 lr: 0.00008
+[epoch 150:   0/ 38] 	 train loss: 0.792133 	 lr: 0.00008
+[epoch 151:   0/ 38] 	 train loss: 0.983097 	 lr: 0.00008
+[epoch 152:   0/ 38] 	 train loss: 0.939736 	 lr: 0.00008
+[epoch 153:   0/ 38] 	 train loss: 0.845711 	 lr: 0.00008
+[epoch 154:   0/ 38] 	 train loss: 0.732401 	 lr: 0.00008
+[epoch 155:   0/ 38] 	 train loss: 0.809569 	 lr: 0.00008
+[epoch 156:   0/ 38] 	 train loss: 0.959501 	 lr: 0.00008
+[epoch 157:   0/ 38] 	 train loss: 0.942622 	 lr: 0.00008
+[epoch 158:   0/ 38] 	 train loss: 0.868706 	 lr: 0.00008
+now evaluate...
+
+val loss: 1.172924 	 acc: 0.632901
+
+[epoch 159:   0/ 38] 	 train loss: 0.801277 	 lr: 0.00008
+[epoch 160:   0/ 38] 	 train loss: 0.888316 	 lr: 0.00008
+[epoch 161:   0/ 38] 	 train loss: 0.852470 	 lr: 0.00008
+[epoch 162:   0/ 38] 	 train loss: 0.809651 	 lr: 0.00008
+[epoch 163:   0/ 38] 	 train loss: 1.014155 	 lr: 0.00008
+[epoch 164:   0/ 38] 	 train loss: 0.798065 	 lr: 0.00008
+[epoch 165:   0/ 38] 	 train loss: 0.779976 	 lr: 0.00008
+[epoch 166:   0/ 38] 	 train loss: 0.763314 	 lr: 0.00008
+[epoch 167:   0/ 38] 	 train loss: 0.843235 	 lr: 0.00008
+[epoch 168:   0/ 38] 	 train loss: 0.807958 	 lr: 0.00008
+now evaluate...
+
+val loss: 1.174628 	 acc: 0.639789
+
+[epoch 169:   0/ 38] 	 train loss: 0.883846 	 lr: 0.00008
+[epoch 170:   0/ 38] 	 train loss: 0.714378 	 lr: 0.00006
+[epoch 171:   0/ 38] 	 train loss: 0.831800 	 lr: 0.00006
+[epoch 172:   0/ 38] 	 train loss: 0.814800 	 lr: 0.00006
+[epoch 173:   0/ 38] 	 train loss: 0.930049 	 lr: 0.00006
+[epoch 174:   0/ 38] 	 train loss: 0.793924 	 lr: 0.00006
+[epoch 175:   0/ 38] 	 train loss: 0.855107 	 lr: 0.00006
+[epoch 176:   0/ 38] 	 train loss: 0.884079 	 lr: 0.00006
+[epoch 177:   0/ 38] 	 train loss: 0.814072 	 lr: 0.00006
+[epoch 178:   0/ 38] 	 train loss: 0.816331 	 lr: 0.00006
+now evaluate...
+
+val loss: 1.145556 	 acc: 0.644652
+
+[epoch 179:   0/ 38] 	 train loss: 0.782769 	 lr: 0.00006
+[epoch 180:   0/ 38] 	 train loss: 0.905991 	 lr: 0.00006
+[epoch 181:   0/ 38] 	 train loss: 0.803452 	 lr: 0.00006
+[epoch 182:   0/ 38] 	 train loss: 0.818200 	 lr: 0.00006
+[epoch 183:   0/ 38] 	 train loss: 0.840982 	 lr: 0.00006
+[epoch 184:   0/ 38] 	 train loss: 0.796906 	 lr: 0.00006
+[epoch 185:   0/ 38] 	 train loss: 0.870483 	 lr: 0.00006
+[epoch 186:   0/ 38] 	 train loss: 0.896633 	 lr: 0.00006
+[epoch 187:   0/ 38] 	 train loss: 0.863149 	 lr: 0.00006
+[epoch 188:   0/ 38] 	 train loss: 0.729943 	 lr: 0.00006
+now evaluate...
+
+val loss: 1.155547 	 acc: 0.637358
+
+[epoch 189:   0/ 38] 	 train loss: 0.920527 	 lr: 0.00006
+[epoch 190:   0/ 38] 	 train loss: 0.790190 	 lr: 0.00006
+[epoch 191:   0/ 38] 	 train loss: 0.827659 	 lr: 0.00004
+[epoch 192:   0/ 38] 	 train loss: 0.784549 	 lr: 0.00004
+[epoch 193:   0/ 38] 	 train loss: 0.759062 	 lr: 0.00004
+[epoch 194:   0/ 38] 	 train loss: 0.780923 	 lr: 0.00004
+[epoch 195:   0/ 38] 	 train loss: 0.863476 	 lr: 0.00004
+[epoch 196:   0/ 38] 	 train loss: 0.724968 	 lr: 0.00004
+[epoch 197:   0/ 38] 	 train loss: 0.857986 	 lr: 0.00004
+now evaluate...
+
+val loss: 1.108139 	 acc: 0.653971
+
+[epoch 198:   0/ 38] 	 train loss: 0.959470 	 lr: 0.00004
+[epoch 199:   0/ 38] 	 train loss: 0.827944 	 lr: 0.00004
+[epoch 200:   0/ 38] 	 train loss: 0.851351 	 lr: 0.00004
+[epoch 201:   0/ 38] 	 train loss: 0.738844 	 lr: 0.00004
+[epoch 202:   0/ 38] 	 train loss: 0.951203 	 lr: 0.00004
+[epoch 203:   0/ 38] 	 train loss: 0.840328 	 lr: 0.00004
+[epoch 204:   0/ 38] 	 train loss: 0.888712 	 lr: 0.00004
+[epoch 205:   0/ 38] 	 train loss: 0.788046 	 lr: 0.00004
+[epoch 206:   0/ 38] 	 train loss: 0.809985 	 lr: 0.00004
+[epoch 207:   0/ 38] 	 train loss: 0.750600 	 lr: 0.00004
+now evaluate...
+
+val loss: 1.150280 	 acc: 0.651540
+
+[epoch 208:   0/ 38] 	 train loss: 0.685811 	 lr: 0.00004
+[epoch 209:   0/ 38] 	 train loss: 0.876738 	 lr: 0.00004
+[epoch 210:   0/ 38] 	 train loss: 0.809666 	 lr: 0.00004
+[epoch 211:   0/ 38] 	 train loss: 0.817734 	 lr: 0.00004
+[epoch 212:   0/ 38] 	 train loss: 0.834045 	 lr: 0.00003
+[epoch 213:   0/ 38] 	 train loss: 0.895705 	 lr: 0.00003
+[epoch 214:   0/ 38] 	 train loss: 0.857499 	 lr: 0.00003
+[epoch 215:   0/ 38] 	 train loss: 0.741725 	 lr: 0.00003
+[epoch 216:   0/ 38] 	 train loss: 0.765935 	 lr: 0.00003
+[epoch 217:   0/ 38] 	 train loss: 0.668496 	 lr: 0.00003
+now evaluate...
+
+val loss: 1.107162 	 acc: 0.653971
+
+[epoch 218:   0/ 38] 	 train loss: 0.960644 	 lr: 0.00003
+[epoch 219:   0/ 38] 	 train loss: 0.809770 	 lr: 0.00003
+[epoch 220:   0/ 38] 	 train loss: 0.782633 	 lr: 0.00003
+[epoch 221:   0/ 38] 	 train loss: 0.755544 	 lr: 0.00003
+[epoch 222:   0/ 38] 	 train loss: 0.834076 	 lr: 0.00003
+[epoch 223:   0/ 38] 	 train loss: 0.794393 	 lr: 0.00003
+[epoch 224:   0/ 38] 	 train loss: 0.948815 	 lr: 0.00003
+[epoch 225:   0/ 38] 	 train loss: 0.755343 	 lr: 0.00003
+[epoch 226:   0/ 38] 	 train loss: 0.847628 	 lr: 0.00003
+[epoch 227:   0/ 38] 	 train loss: 0.808462 	 lr: 0.00003
+now evaluate...
+
+val loss: 1.166095 	 acc: 0.639384
+
+[epoch 228:   0/ 38] 	 train loss: 0.837684 	 lr: 0.00003
+[epoch 229:   0/ 38] 	 train loss: 0.839305 	 lr: 0.00003
+[epoch 230:   0/ 38] 	 train loss: 0.767974 	 lr: 0.00003
+[epoch 231:   0/ 38] 	 train loss: 0.704611 	 lr: 0.00003
+[epoch 232:   0/ 38] 	 train loss: 0.877061 	 lr: 0.00003
+[epoch 233:   0/ 38] 	 train loss: 0.678655 	 lr: 0.00002
+[epoch 234:   0/ 38] 	 train loss: 0.713806 	 lr: 0.00002
+[epoch 235:   0/ 38] 	 train loss: 0.952053 	 lr: 0.00002
+[epoch 236:   0/ 38] 	 train loss: 0.687186 	 lr: 0.00002
+[epoch 237:   0/ 38] 	 train loss: 0.748266 	 lr: 0.00002
+now evaluate...
+
+val loss: 1.118028 	 acc: 0.653971
+
+[epoch 238:   0/ 38] 	 train loss: 0.818666 	 lr: 0.00002
+[epoch 239:   0/ 38] 	 train loss: 0.836553 	 lr: 0.00002
+[epoch 240:   0/ 38] 	 train loss: 0.739321 	 lr: 0.00002
+[epoch 241:   0/ 38] 	 train loss: 0.775145 	 lr: 0.00002
+[epoch 242:   0/ 38] 	 train loss: 0.743931 	 lr: 0.00002
+[epoch 243:   0/ 38] 	 train loss: 0.754377 	 lr: 0.00002
+[epoch 244:   0/ 38] 	 train loss: 0.845058 	 lr: 0.00002
+[epoch 245:   0/ 38] 	 train loss: 0.654792 	 lr: 0.00002
+[epoch 246:   0/ 38] 	 train loss: 0.811558 	 lr: 0.00002
+[epoch 247:   0/ 38] 	 train loss: 0.870092 	 lr: 0.00002
+now evaluate...
+
+val loss: 1.131745 	 acc: 0.652755
+
+[epoch 248:   0/ 38] 	 train loss: 0.731559 	 lr: 0.00002
+[epoch 249:   0/ 38] 	 train loss: 0.707449 	 lr: 0.00002
+[epoch 250:   0/ 38] 	 train loss: 0.919213 	 lr: 0.00002
+[epoch 251:   0/ 38] 	 train loss: 0.805446 	 lr: 0.00002
+[epoch 252:   0/ 38] 	 train loss: 0.808959 	 lr: 0.00002
+[epoch 253:   0/ 38] 	 train loss: 0.860131 	 lr: 0.00002
+[epoch 254:   0/ 38] 	 train loss: 0.801789 	 lr: 0.00001
+[epoch 255:   0/ 38] 	 train loss: 0.764302 	 lr: 0.00001
+[epoch 256:   0/ 38] 	 train loss: 0.902332 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.121319 	 acc: 0.656807
+
+[epoch 257:   0/ 38] 	 train loss: 0.921360 	 lr: 0.00001
+[epoch 258:   0/ 38] 	 train loss: 0.839980 	 lr: 0.00001
+[epoch 259:   0/ 38] 	 train loss: 0.798953 	 lr: 0.00001
+[epoch 260:   0/ 38] 	 train loss: 0.821808 	 lr: 0.00001
+[epoch 261:   0/ 38] 	 train loss: 0.774143 	 lr: 0.00001
+[epoch 262:   0/ 38] 	 train loss: 0.867223 	 lr: 0.00001
+[epoch 263:   0/ 38] 	 train loss: 0.802451 	 lr: 0.00001
+[epoch 264:   0/ 38] 	 train loss: 0.763322 	 lr: 0.00001
+[epoch 265:   0/ 38] 	 train loss: 0.774800 	 lr: 0.00001
+[epoch 266:   0/ 38] 	 train loss: 0.761661 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.094798 	 acc: 0.658023
+
+[epoch 267:   0/ 38] 	 train loss: 0.645252 	 lr: 0.00001
+[epoch 268:   0/ 38] 	 train loss: 0.836610 	 lr: 0.00001
+[epoch 269:   0/ 38] 	 train loss: 0.883064 	 lr: 0.00001
+[epoch 270:   0/ 38] 	 train loss: 0.706779 	 lr: 0.00001
+[epoch 271:   0/ 38] 	 train loss: 0.825550 	 lr: 0.00001
+[epoch 272:   0/ 38] 	 train loss: 0.807546 	 lr: 0.00001
+[epoch 273:   0/ 38] 	 train loss: 0.950579 	 lr: 0.00001
+[epoch 274:   0/ 38] 	 train loss: 0.778889 	 lr: 0.00001
+[epoch 275:   0/ 38] 	 train loss: 0.824635 	 lr: 0.00001
+[epoch 276:   0/ 38] 	 train loss: 0.688211 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.124956 	 acc: 0.644652
+
+[epoch 277:   0/ 38] 	 train loss: 0.702629 	 lr: 0.00001
+[epoch 278:   0/ 38] 	 train loss: 0.848863 	 lr: 0.00001
+[epoch 279:   0/ 38] 	 train loss: 0.820905 	 lr: 0.00001
+[epoch 280:   0/ 38] 	 train loss: 0.833396 	 lr: 0.00001
+[epoch 281:   0/ 38] 	 train loss: 0.758995 	 lr: 0.00001
+[epoch 282:   0/ 38] 	 train loss: 0.844009 	 lr: 0.00001
+[epoch 283:   0/ 38] 	 train loss: 0.772324 	 lr: 0.00001
+[epoch 284:   0/ 38] 	 train loss: 0.782130 	 lr: 0.00001
+[epoch 285:   0/ 38] 	 train loss: 0.719187 	 lr: 0.00001
+[epoch 286:   0/ 38] 	 train loss: 0.735002 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.088234 	 acc: 0.666532
+
+[epoch 287:   0/ 38] 	 train loss: 0.731721 	 lr: 0.00001
+[epoch 288:   0/ 38] 	 train loss: 0.776061 	 lr: 0.00001
+[epoch 289:   0/ 38] 	 train loss: 0.665233 	 lr: 0.00001
+[epoch 290:   0/ 38] 	 train loss: 0.786020 	 lr: 0.00001
+[epoch 291:   0/ 38] 	 train loss: 0.848506 	 lr: 0.00001
+[epoch 292:   0/ 38] 	 train loss: 0.782732 	 lr: 0.00001
+[epoch 293:   0/ 38] 	 train loss: 0.956192 	 lr: 0.00001
+[epoch 294:   0/ 38] 	 train loss: 0.794283 	 lr: 0.00001
+[epoch 295:   0/ 38] 	 train loss: 0.830816 	 lr: 0.00001
+[epoch 296:   0/ 38] 	 train loss: 0.862176 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.130078 	 acc: 0.645867
+
+[epoch 297:   0/ 38] 	 train loss: 0.808101 	 lr: 0.00001
+[epoch 298:   0/ 38] 	 train loss: 0.842925 	 lr: 0.00001
+[epoch 299:   0/ 38] 	 train loss: 0.898352 	 lr: 0.00001
+[epoch 300:   0/ 38] 	 train loss: 0.833234 	 lr: 0.00001
+[epoch 301:   0/ 38] 	 train loss: 0.783999 	 lr: 0.00001
+[epoch 302:   0/ 38] 	 train loss: 0.772617 	 lr: 0.00001
+[epoch 303:   0/ 38] 	 train loss: 0.753996 	 lr: 0.00001
+[epoch 304:   0/ 38] 	 train loss: 0.703322 	 lr: 0.00001
+[epoch 305:   0/ 38] 	 train loss: 0.751154 	 lr: 0.00001
+[epoch 306:   0/ 38] 	 train loss: 0.844259 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.087676 	 acc: 0.662480
+
+[epoch 307:   0/ 38] 	 train loss: 0.759800 	 lr: 0.00001
+[epoch 308:   0/ 38] 	 train loss: 1.049122 	 lr: 0.00001
+[epoch 309:   0/ 38] 	 train loss: 0.778360 	 lr: 0.00001
+[epoch 310:   0/ 38] 	 train loss: 0.719098 	 lr: 0.00001
+[epoch 311:   0/ 38] 	 train loss: 0.851390 	 lr: 0.00001
+[epoch 312:   0/ 38] 	 train loss: 0.730439 	 lr: 0.00001
+[epoch 313:   0/ 38] 	 train loss: 0.874179 	 lr: 0.00001
+[epoch 314:   0/ 38] 	 train loss: 0.851620 	 lr: 0.00001
+[epoch 315:   0/ 38] 	 train loss: 0.836547 	 lr: 0.00001
+[epoch 316:   0/ 38] 	 train loss: 0.859990 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.141561 	 acc: 0.653566
+
+[epoch 317:   0/ 38] 	 train loss: 0.757995 	 lr: 0.00001
+[epoch 318:   0/ 38] 	 train loss: 0.692206 	 lr: 0.00001
+[epoch 319:   0/ 38] 	 train loss: 0.772468 	 lr: 0.00001
+[epoch 320:   0/ 38] 	 train loss: 0.736282 	 lr: 0.00001
+[epoch 321:   0/ 38] 	 train loss: 0.906700 	 lr: 0.00001
+[epoch 322:   0/ 38] 	 train loss: 0.813580 	 lr: 0.00001
+[epoch 323:   0/ 38] 	 train loss: 0.734402 	 lr: 0.00001
+[epoch 324:   0/ 38] 	 train loss: 0.833887 	 lr: 0.00001
+[epoch 325:   0/ 38] 	 train loss: 0.790497 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.080059 	 acc: 0.667747
+
+[epoch 326:   0/ 38] 	 train loss: 0.839354 	 lr: 0.00001
+[epoch 327:   0/ 38] 	 train loss: 0.694438 	 lr: 0.00001
+[epoch 328:   0/ 38] 	 train loss: 0.743343 	 lr: 0.00001
+[epoch 329:   0/ 38] 	 train loss: 0.701769 	 lr: 0.00001
+[epoch 330:   0/ 38] 	 train loss: 0.937364 	 lr: 0.00001
+[epoch 331:   0/ 38] 	 train loss: 0.850102 	 lr: 0.00001
+[epoch 332:   0/ 38] 	 train loss: 0.703342 	 lr: 0.00001
+[epoch 333:   0/ 38] 	 train loss: 0.786694 	 lr: 0.00001
+[epoch 334:   0/ 38] 	 train loss: 0.655746 	 lr: 0.00001
+[epoch 335:   0/ 38] 	 train loss: 0.833364 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.143068 	 acc: 0.653566
+
+[epoch 336:   0/ 38] 	 train loss: 0.843472 	 lr: 0.00001
+[epoch 337:   0/ 38] 	 train loss: 0.768830 	 lr: 0.00001
+[epoch 338:   0/ 38] 	 train loss: 0.921630 	 lr: 0.00001
+[epoch 339:   0/ 38] 	 train loss: 0.836298 	 lr: 0.00001
+[epoch 340:   0/ 38] 	 train loss: 0.715752 	 lr: 0.00001
+[epoch 341:   0/ 38] 	 train loss: 0.942960 	 lr: 0.00001
+[epoch 342:   0/ 38] 	 train loss: 0.765625 	 lr: 0.00001
+[epoch 343:   0/ 38] 	 train loss: 0.740761 	 lr: 0.00001
+[epoch 344:   0/ 38] 	 train loss: 0.923411 	 lr: 0.00001
+[epoch 345:   0/ 38] 	 train loss: 0.779573 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.092004 	 acc: 0.658023
+
+[epoch 346:   0/ 38] 	 train loss: 0.704466 	 lr: 0.00001
+[epoch 347:   0/ 38] 	 train loss: 0.841599 	 lr: 0.00001
+[epoch 348:   0/ 38] 	 train loss: 0.819718 	 lr: 0.00001
+[epoch 349:   0/ 38] 	 train loss: 0.919243 	 lr: 0.00001
+[epoch 350:   0/ 38] 	 train loss: 0.751428 	 lr: 0.00001
+[epoch 351:   0/ 38] 	 train loss: 0.811593 	 lr: 0.00001
+[epoch 352:   0/ 38] 	 train loss: 0.822719 	 lr: 0.00001
+[epoch 353:   0/ 38] 	 train loss: 0.785182 	 lr: 0.00001
+[epoch 354:   0/ 38] 	 train loss: 0.677725 	 lr: 0.00001
+[epoch 355:   0/ 38] 	 train loss: 0.785977 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.109533 	 acc: 0.658428
+
+[epoch 356:   0/ 38] 	 train loss: 0.888689 	 lr: 0.00001
+[epoch 357:   0/ 38] 	 train loss: 0.821283 	 lr: 0.00001
+[epoch 358:   0/ 38] 	 train loss: 0.843323 	 lr: 0.00001
+[epoch 359:   0/ 38] 	 train loss: 0.737887 	 lr: 0.00001
+[epoch 360:   0/ 38] 	 train loss: 0.736997 	 lr: 0.00001
+[epoch 361:   0/ 38] 	 train loss: 0.817519 	 lr: 0.00001
+[epoch 362:   0/ 38] 	 train loss: 0.848713 	 lr: 0.00001
+[epoch 363:   0/ 38] 	 train loss: 0.832708 	 lr: 0.00001
+[epoch 364:   0/ 38] 	 train loss: 0.717580 	 lr: 0.00001
+[epoch 365:   0/ 38] 	 train loss: 0.773785 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.095110 	 acc: 0.666126
+
+[epoch 366:   0/ 38] 	 train loss: 0.721361 	 lr: 0.00001
+[epoch 367:   0/ 38] 	 train loss: 0.802785 	 lr: 0.00001
+[epoch 368:   0/ 38] 	 train loss: 0.821038 	 lr: 0.00001
+[epoch 369:   0/ 38] 	 train loss: 0.870142 	 lr: 0.00001
+[epoch 370:   0/ 38] 	 train loss: 0.863198 	 lr: 0.00001
+[epoch 371:   0/ 38] 	 train loss: 0.755331 	 lr: 0.00001
+[epoch 372:   0/ 38] 	 train loss: 0.822596 	 lr: 0.00001
+[epoch 373:   0/ 38] 	 train loss: 0.812163 	 lr: 0.00001
+[epoch 374:   0/ 38] 	 train loss: 0.888272 	 lr: 0.00001
+[epoch 375:   0/ 38] 	 train loss: 0.875686 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.114995 	 acc: 0.659643
+
+[epoch 376:   0/ 38] 	 train loss: 0.794304 	 lr: 0.00001
+[epoch 377:   0/ 38] 	 train loss: 0.789252 	 lr: 0.00001
+[epoch 378:   0/ 38] 	 train loss: 0.857136 	 lr: 0.00001
+[epoch 379:   0/ 38] 	 train loss: 0.877247 	 lr: 0.00001
+[epoch 380:   0/ 38] 	 train loss: 0.787795 	 lr: 0.00001
+[epoch 381:   0/ 38] 	 train loss: 0.730921 	 lr: 0.00001
+[epoch 382:   0/ 38] 	 train loss: 0.845890 	 lr: 0.00001
+[epoch 383:   0/ 38] 	 train loss: 0.840988 	 lr: 0.00001
+[epoch 384:   0/ 38] 	 train loss: 0.854932 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.139061 	 acc: 0.635737
+
+[epoch 385:   0/ 38] 	 train loss: 0.755319 	 lr: 0.00001
+[epoch 386:   0/ 38] 	 train loss: 0.722439 	 lr: 0.00001
+[epoch 387:   0/ 38] 	 train loss: 0.894145 	 lr: 0.00001
+[epoch 388:   0/ 38] 	 train loss: 0.809014 	 lr: 0.00001
+[epoch 389:   0/ 38] 	 train loss: 0.789368 	 lr: 0.00001
+[epoch 390:   0/ 38] 	 train loss: 0.804086 	 lr: 0.00001
+[epoch 391:   0/ 38] 	 train loss: 0.863613 	 lr: 0.00001
+[epoch 392:   0/ 38] 	 train loss: 0.680639 	 lr: 0.00001
+[epoch 393:   0/ 38] 	 train loss: 0.820653 	 lr: 0.00001
+[epoch 394:   0/ 38] 	 train loss: 0.982384 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.105937 	 acc: 0.665721
+
+[epoch 395:   0/ 38] 	 train loss: 0.773969 	 lr: 0.00001
+[epoch 396:   0/ 38] 	 train loss: 0.717442 	 lr: 0.00001
+[epoch 397:   0/ 38] 	 train loss: 0.854082 	 lr: 0.00001
+[epoch 398:   0/ 38] 	 train loss: 0.853234 	 lr: 0.00001
+[epoch 399:   0/ 38] 	 train loss: 0.853288 	 lr: 0.00001
+[epoch 400:   0/ 38] 	 train loss: 0.746616 	 lr: 0.00001
+[epoch 401:   0/ 38] 	 train loss: 0.902970 	 lr: 0.00001
+[epoch 402:   0/ 38] 	 train loss: 0.987751 	 lr: 0.00001
+[epoch 403:   0/ 38] 	 train loss: 0.698579 	 lr: 0.00001
+[epoch 404:   0/ 38] 	 train loss: 0.958414 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.108739 	 acc: 0.662885
+
+[epoch 405:   0/ 38] 	 train loss: 0.784154 	 lr: 0.00001
+[epoch 406:   0/ 38] 	 train loss: 0.713581 	 lr: 0.00001
+[epoch 407:   0/ 38] 	 train loss: 0.745371 	 lr: 0.00001
+[epoch 408:   0/ 38] 	 train loss: 0.710471 	 lr: 0.00001
+[epoch 409:   0/ 38] 	 train loss: 0.602583 	 lr: 0.00001
+[epoch 410:   0/ 38] 	 train loss: 0.817228 	 lr: 0.00001
+[epoch 411:   0/ 38] 	 train loss: 0.802664 	 lr: 0.00001
+[epoch 412:   0/ 38] 	 train loss: 0.847805 	 lr: 0.00001
+[epoch 413:   0/ 38] 	 train loss: 0.850785 	 lr: 0.00001
+[epoch 414:   0/ 38] 	 train loss: 0.889674 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.102292 	 acc: 0.660049
+
+[epoch 415:   0/ 38] 	 train loss: 0.686776 	 lr: 0.00001
+[epoch 416:   0/ 38] 	 train loss: 0.755884 	 lr: 0.00001
+[epoch 417:   0/ 38] 	 train loss: 0.821643 	 lr: 0.00001
+[epoch 418:   0/ 38] 	 train loss: 0.869865 	 lr: 0.00001
+[epoch 419:   0/ 38] 	 train loss: 0.960162 	 lr: 0.00001
+[epoch 420:   0/ 38] 	 train loss: 0.822044 	 lr: 0.00001
+[epoch 421:   0/ 38] 	 train loss: 0.967738 	 lr: 0.00001
+[epoch 422:   0/ 38] 	 train loss: 0.913333 	 lr: 0.00001
+[epoch 423:   0/ 38] 	 train loss: 0.766975 	 lr: 0.00001
+[epoch 424:   0/ 38] 	 train loss: 0.896385 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.117877 	 acc: 0.652350
+
+[epoch 425:   0/ 38] 	 train loss: 0.768641 	 lr: 0.00001
+[epoch 426:   0/ 38] 	 train loss: 0.694840 	 lr: 0.00001
+[epoch 427:   0/ 38] 	 train loss: 0.837356 	 lr: 0.00001
+[epoch 428:   0/ 38] 	 train loss: 0.697663 	 lr: 0.00001
+[epoch 429:   0/ 38] 	 train loss: 0.939309 	 lr: 0.00001
+[epoch 430:   0/ 38] 	 train loss: 0.899567 	 lr: 0.00001
+[epoch 431:   0/ 38] 	 train loss: 0.744091 	 lr: 0.00001
+[epoch 432:   0/ 38] 	 train loss: 0.750541 	 lr: 0.00001
+[epoch 433:   0/ 38] 	 train loss: 0.756489 	 lr: 0.00001
+[epoch 434:   0/ 38] 	 train loss: 0.858751 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.066397 	 acc: 0.668558
+
+[epoch 435:   0/ 38] 	 train loss: 0.730825 	 lr: 0.00001
+[epoch 436:   0/ 38] 	 train loss: 0.879885 	 lr: 0.00001
+[epoch 437:   0/ 38] 	 train loss: 0.798049 	 lr: 0.00001
+[epoch 438:   0/ 38] 	 train loss: 0.762388 	 lr: 0.00001
+[epoch 439:   0/ 38] 	 train loss: 0.792043 	 lr: 0.00001
+[epoch 440:   0/ 38] 	 train loss: 0.816134 	 lr: 0.00001
+[epoch 441:   0/ 38] 	 train loss: 0.706636 	 lr: 0.00001
+[epoch 442:   0/ 38] 	 train loss: 0.743124 	 lr: 0.00001
+[epoch 443:   0/ 38] 	 train loss: 0.797251 	 lr: 0.00001
+[epoch 444:   0/ 38] 	 train loss: 0.784567 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.122021 	 acc: 0.653566
+
+[epoch 445:   0/ 38] 	 train loss: 0.741085 	 lr: 0.00001
+[epoch 446:   0/ 38] 	 train loss: 0.788001 	 lr: 0.00001
+[epoch 447:   0/ 38] 	 train loss: 0.772445 	 lr: 0.00001
+[epoch 448:   0/ 38] 	 train loss: 0.763362 	 lr: 0.00001
+[epoch 449:   0/ 38] 	 train loss: 0.797464 	 lr: 0.00001
+[epoch 450:   0/ 38] 	 train loss: 0.760431 	 lr: 0.00001
+[epoch 451:   0/ 38] 	 train loss: 0.670795 	 lr: 0.00001
+[epoch 452:   0/ 38] 	 train loss: 0.780222 	 lr: 0.00001
+[epoch 453:   0/ 38] 	 train loss: 0.818788 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.098281 	 acc: 0.666532
+
+[epoch 454:   0/ 38] 	 train loss: 0.692802 	 lr: 0.00001
+[epoch 455:   0/ 38] 	 train loss: 0.646036 	 lr: 0.00001
+[epoch 456:   0/ 38] 	 train loss: 0.786746 	 lr: 0.00001
+[epoch 457:   0/ 38] 	 train loss: 0.838586 	 lr: 0.00001
+[epoch 458:   0/ 38] 	 train loss: 0.755906 	 lr: 0.00001
+[epoch 459:   0/ 38] 	 train loss: 0.719443 	 lr: 0.00001
+[epoch 460:   0/ 38] 	 train loss: 0.777236 	 lr: 0.00001
+[epoch 461:   0/ 38] 	 train loss: 0.732133 	 lr: 0.00001
+[epoch 462:   0/ 38] 	 train loss: 0.706641 	 lr: 0.00001
+[epoch 463:   0/ 38] 	 train loss: 0.762876 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.075690 	 acc: 0.666937
+
+[epoch 464:   0/ 38] 	 train loss: 0.882922 	 lr: 0.00001
+[epoch 465:   0/ 38] 	 train loss: 0.803836 	 lr: 0.00001
+[epoch 466:   0/ 38] 	 train loss: 0.710757 	 lr: 0.00001
+[epoch 467:   0/ 38] 	 train loss: 0.824100 	 lr: 0.00001
+[epoch 468:   0/ 38] 	 train loss: 0.801795 	 lr: 0.00001
+[epoch 469:   0/ 38] 	 train loss: 0.777548 	 lr: 0.00001
+[epoch 470:   0/ 38] 	 train loss: 0.670318 	 lr: 0.00001
+[epoch 471:   0/ 38] 	 train loss: 0.937218 	 lr: 0.00001
+[epoch 472:   0/ 38] 	 train loss: 0.706095 	 lr: 0.00001
+[epoch 473:   0/ 38] 	 train loss: 0.812255 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.104083 	 acc: 0.658023
+
+[epoch 474:   0/ 38] 	 train loss: 0.779980 	 lr: 0.00001
+[epoch 475:   0/ 38] 	 train loss: 0.759027 	 lr: 0.00001
+[epoch 476:   0/ 38] 	 train loss: 0.878589 	 lr: 0.00001
+[epoch 477:   0/ 38] 	 train loss: 0.757683 	 lr: 0.00001
+[epoch 478:   0/ 38] 	 train loss: 0.761610 	 lr: 0.00001
+[epoch 479:   0/ 38] 	 train loss: 0.789279 	 lr: 0.00001
+[epoch 480:   0/ 38] 	 train loss: 0.799706 	 lr: 0.00001
+[epoch 481:   0/ 38] 	 train loss: 0.807534 	 lr: 0.00001
+[epoch 482:   0/ 38] 	 train loss: 0.883129 	 lr: 0.00001
+[epoch 483:   0/ 38] 	 train loss: 0.955902 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.092236 	 acc: 0.657212
+
+[epoch 484:   0/ 38] 	 train loss: 0.808210 	 lr: 0.00001
+[epoch 485:   0/ 38] 	 train loss: 0.820283 	 lr: 0.00001
+[epoch 486:   0/ 38] 	 train loss: 0.737854 	 lr: 0.00001
+[epoch 487:   0/ 38] 	 train loss: 0.889441 	 lr: 0.00001
+[epoch 488:   0/ 38] 	 train loss: 0.828507 	 lr: 0.00001
+[epoch 489:   0/ 38] 	 train loss: 0.784563 	 lr: 0.00001
+[epoch 490:   0/ 38] 	 train loss: 0.702145 	 lr: 0.00001
+[epoch 491:   0/ 38] 	 train loss: 0.663332 	 lr: 0.00001
+[epoch 492:   0/ 38] 	 train loss: 0.814682 	 lr: 0.00001
+[epoch 493:   0/ 38] 	 train loss: 0.799603 	 lr: 0.00001
+now evaluate...
+
+val loss: 1.059447 	 acc: 0.671799
+
+[epoch 494:   0/ 38] 	 train loss: 0.865855 	 lr: 0.00001
+[epoch 495:   0/ 38] 	 train loss: 0.702710 	 lr: 0.00001
+[epoch 496:   0/ 38] 	 train loss: 0.953805 	 lr: 0.00001
+[epoch 497:   0/ 38] 	 train loss: 0.694567 	 lr: 0.00001
+[epoch 498:   0/ 38] 	 train loss: 0.768181 	 lr: 0.00001
+[epoch 499:   0/ 38] 	 train loss: 0.780395 	 lr: 0.00001
+[epoch 500:   0/ 38] 	 train loss: 0.793389 	 lr: 0.00001

@@ -1,0 +1,89 @@
+train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is deprecated, as the default Loader is unsafe. Please read https://msg.pyyaml.org/load for full details.
+  config = yaml.load(f)
+
+**************************
+
+[workers]: 4
+
+[num_points]: 2048
+
+[num_classes]: 50
+
+[batch_size]: 28
+
+[base_lr]: 0.1
+
+[lr_clip]: 1e-05
+
+[lr_decay]: 0.5
+
+[decay_step]: 50
+
+[epochs]: 500
+
+[weight_decay]: 0
+
+[bn_momentum]: 0.9
+
+[bnm_clip]: 0.01
+
+[bn_decay]: 0.5
+
+[evaluate]: 1
+
+[val_freq_epoch]: 10
+
+[print_freq_iter]: 20
+
+[input_channels]: 0
+
+[relation_prior]: 1
+
+[checkpoint]: 
+
+[save_path]: seg
+
+[data_root]: /media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal
+
+**************************
+
+****** Airplane: 0.101173
+****** Bag: 0.448783
+****** Cap: 0.363659
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.352272
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.087702
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.071045
+****** Skateboard: 0.161290
+****** Table: 0.231918
+************ Test Loss: 1.170663
+************ Class_mIoU: 0.152044
+************ Instance_mIoU: 0.176336
+[epoch   1] 	 train loss: 1.899413 	 lr: 0.10000
+****** Airplane: 0.101906
+****** Bag: 0.000000
+****** Cap: 0.000000
+****** Car: 0.063291
+****** Chair: 0.209162
+****** Earphone: 0.119048
+****** Guitar: 0.000000
+****** Knife: 0.000000
+****** Lamp: 0.321678
+****** Laptop: 0.000000
+****** Motorbike: 0.032128
+****** Mug: 0.013158
+****** Pistol: 0.007576
+****** Rocket: 0.000000
+****** Skateboard: 0.161290
+****** Table: 0.232704
+************ Test Loss: 1583.936193
+************ Class_mIoU: 0.078871
+************ Instance_mIoU: 0.170658
+[epoch   2] 	 train loss: 90640119.495445 	 lr: 0.10000

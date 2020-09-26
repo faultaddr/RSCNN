@@ -47,15 +47,6 @@ train_partseg.py:37: YAMLLoadWarning: calling yaml.load() without Loader=... is 
 
 **************************
 
-[epoch   1] 	 train loss: 1.765578 	 lr: 0.10000
-[epoch   2] 	 train loss: 1.211380 	 lr: 0.10000
-[epoch   3] 	 train loss: 1.170940 	 lr: 0.10000
-[epoch   4] 	 train loss: 1.162770 	 lr: 0.10000
-[epoch   5] 	 train loss: 1.155295 	 lr: 0.10000
-[epoch   6] 	 train loss: 1.154973 	 lr: 0.10000
-[epoch   7] 	 train loss: 1.160784 	 lr: 0.10000
-[epoch   8] 	 train loss: 1.154487 	 lr: 0.10000
-[epoch   9] 	 train loss: 1.189623 	 lr: 0.10000
 Traceback (most recent call last):
   File "train_partseg.py", line 214, in <module>
     main()
@@ -63,6 +54,6 @@ Traceback (most recent call last):
     train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_scheduler, bnm_scheduler, args, num_batch)
   File "train_partseg.py", line 139, in train
     validate(test_dataloader, model, criterion, args, batch_count)
-  File "train_partseg.py", line 170, in validate
-    pred = pred.item()
-ValueError: only one element tensors can be converted to Python scalars
+  File "train_partseg.py", line 175, in validate
+    cat = seg_label_to_cat[int(target[b, 0].numpy())]
+AttributeError: 'numpy.int64' object has no attribute 'numpy'

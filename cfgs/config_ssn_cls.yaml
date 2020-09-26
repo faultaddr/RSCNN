@@ -5,11 +5,11 @@ common:
     num_classes: 40
     batch_size: 256
     
-    base_lr: 0.001
+    base_lr: 0.01
     lr_clip: 0.00001
     lr_decay: 0.7
-    decay_step: 21
-    epochs: 500
+    decay_step: 50
+    epochs: 5000
 
     weight_decay: 0.00001
     bn_momentum: 0.9
