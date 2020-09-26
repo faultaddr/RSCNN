@@ -3,7 +3,7 @@ common:
 
     num_points: 2048
     num_classes: 50
-    batch_size: 24
+    batch_size: 16
     
     base_lr: 0.001
     lr_clip: 0.00001
@@ -29,4 +29,4 @@ common:
     
     checkpoint: ''        # the model to start from
     save_path: seg
-    data_root: '/media/disk3/pyy/Relation-Shape-CNN/shapenetcore_partanno_segmentation_benchmark_v0_normal'
+    data_root: './shapenetcore_partanno_segmentation_benchmark_v0_normal'

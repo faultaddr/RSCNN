@@ -1,3 +1,4 @@
 /modelnet40_ply_hdf5_2048
 modelnet40_ply_hdf5_2048.zip
 *.pyc
+/shapenetcore_partanno_segmentation_benchmark_v0_normal/

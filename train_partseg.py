@@ -94,7 +94,7 @@ def main():
 
 def to_categorical(y, num_classes):
     """ 1-hot encodes a tensor """
-    new_y = torch.eye(num_classes)[y.cpu().data.numpy(),]
+    new_y = torch.eye(num_classes)[y.cpu().numpy(),]
     if (y.is_cuda):
         return new_y.cuda()
     return new_y
@@ -104,9 +104,9 @@ def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_sch
     global Class_mIoU, Inst_mIoU
     Class_mIoU, Inst_mIoU = 0.83, 0.85
     batch_count = 0
-    model.train()
+    #model.train()
     for epoch in range(args.epochs):
-        #model.train()
+        model.train()
         losses=[]
         start_time=time.time()
         for i, data in enumerate(train_dataloader):
@@ -115,6 +115,7 @@ def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_sch
             target = target.cuda()
             points = points.cuda()
             one_hot_target=to_categorical(target,50)
+            print('target',target.shape)
             # augmentation
             points = PointcloudScaleAndTranslate(points)
             optimizer.zero_grad()
@@ -133,7 +134,6 @@ def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_sch
             loss.backward()
 
             optimizer.step()
-            print(loss)
             losses.append(loss.item())
             if lr_scheduler is not None:
                 lr_scheduler.step(epoch)
@@ -153,16 +153,37 @@ def train(train_dataloader, test_dataloader, model, criterion, optimizer, lr_sch
 def validate(test_dataloader, model, criterion, args, iter):
     global Class_mIoU, Inst_mIoU, test_dataset
     model.eval()
-    with torch.no_grad():
-        seg_classes = test_dataset.seg_classes
-        shape_ious = {cat:[] for cat in seg_classes.keys()}
-        seg_label_to_cat = {}           # {0:Airplane, 1:Airplane, ...49:Table}
-        for cat in seg_classes.keys():
-            for label in seg_classes[cat]:
-                seg_label_to_cat[label] = cat
+    PointcloudScaleAndTranslate = d_utils.PointcloudScaleAndTranslate()   # initialize augmentation
+    seg_classes = test_dataset.seg_classes
+    shape_ious = {cat:[] for cat in seg_classes.keys()}
+    seg_label_to_cat = {}           # {0:Airplane, 1:Airplane, ...49:Table}
+    for cat in seg_classes.keys():
+        for label in seg_classes[cat]:
+            seg_label_to_cat[label] = cat
 
-        losses = []
+    losses = 0.0
+    lens=len(test_dataloader)
+    with torch.no_grad():
         for _, data in enumerate(test_dataloader):
+            points, target, cls = data
+            target = target.cuda()
+            points = points.cuda()
+            one_hot_target=to_categorical(target,50)
+            # augmentation
+            #points = PointcloudScaleAndTranslate(points)
+
+            batch_one_hot_cls = np.zeros((len(cls), 16))   # 16 object classes
+            for b in range(len(cls)):
+                batch_one_hot_cls[b, int(cls[b])] = 1
+            batch_one_hot_cls = torch.from_numpy(batch_one_hot_cls).float().cuda()
+            # batch_one_hot_cls = Variable(batch_one_hot_cls.float().cuda())
+
+            pred,context = model(points, batch_one_hot_cls)
+            pred_t = pred.view(-1, args.num_classes)
+            target_t = target.view(-1,1)[:,0]
+            loss = criterion(pred_t, target_t,None,context,one_hot_target)
+            losses+=loss.item()
+            """
             points, target, cls = data
             #points, target = Variable(points, volatile=True), Variable(target, volatile=True)
             points, target = points.cuda(), target.cuda()
@@ -172,22 +193,22 @@ def validate(test_dataloader, model, criterion, args, iter):
                 batch_one_hot_cls[b, int(cls[b])] = 1
             batch_one_hot_cls = torch.from_numpy(batch_one_hot_cls).float().cuda()
             # batch_one_hot_cls = Variable(batch_one_hot_cls.float().cuda())
-
             pred,context= model(points, batch_one_hot_cls)
             loss = criterion(pred.view(-1, args.num_classes), target.view(-1,1)[:,0],None,context,one_hot_target)
-            losses.append(loss.item())
+            losses+=loss.item()
             pred = pred.cpu()
             target = target.cpu()
+            """
             pred_val = torch.zeros(len(cls), args.num_points).type(torch.LongTensor)
             # pred to the groundtruth classes (selected by seg_classes[cat])
             for b in range(len(cls)):
-                cat = seg_label_to_cat[int(target[b, 0].numpy())]
+                cat = seg_label_to_cat[int(target[b, 0].cpu().numpy())]
                 logits = pred[b, :, :]   # (num_points, num_classes)
                 pred_val[b, :] = logits[:, seg_classes[cat]].max(1)[1] + seg_classes[cat][0]
 
             for b in range(len(cls)):
-                segp = pred_val[b, :].numpy()
-                segl = target[b, :].numpy()
+                segp = pred_val[b, :].cpu().numpy()
+                segl = target[b, :].cpu().numpy()
                 cat = seg_label_to_cat[int(segl[0])]
                 part_ious = [0.0 for _ in range(len(seg_classes[cat]))]
                 for l in seg_classes[cat]:
@@ -207,7 +228,7 @@ def validate(test_dataloader, model, criterion, args, iter):
 
         for cat in sorted(shape_ious.keys()):
             print('****** %s: %0.6f'%(cat, shape_ious[cat]))
-        print('************ Test Loss: %0.6f' % (np.array(losses).mean()))
+        print('************ Test Loss: %0.6f' % (losses/lens))
         print('************ Class_mIoU: %0.6f' % (mean_class_ious))
         print('************ Instance_mIoU: %0.6f' % (np.mean(instance_ious)))
 
@@ -217,7 +238,7 @@ def validate(test_dataloader, model, criterion, args, iter):
             if np.mean(instance_ious) > Inst_mIoU:
                 Inst_mIoU = np.mean(instance_ious)
             torch.save(model.state_dict(), '%s/seg_msn_iter_%d_ins_%0.6f_cls_%0.6f.pth' % (args.save_path, iter, np.mean(instance_ious), mean_class_ious))
-        #model.train()
+            #model.train()
 
 if __name__ == "__main__":
     main()

@@ -10,6 +10,7 @@ import pytorch_utils as pt_utils
 from typing import List, Tuple
 
 #from _ext import pointnet2
+"""
 try:
     import utils._ext as _ext
 except ImportError:
@@ -19,7 +20,15 @@ except ImportError:
             "Please see the setup instructions in the README: "
             "https://github.com/erikwijmans/Pointnet2_PyTorch/blob/master/README.rst"
         )
-
+"""
+#import pointnet2_ops.pointnet2_modules as _ext
+try:
+    import pointnet2_ops._ext as _ext
+except ImportError:
+    from torch.utils.cpp_extension import load
+    import glob
+    import os.path as osp
+    import os
 if False:
     # Workaround for type hints without depending on the `typing` module
     from typing import *

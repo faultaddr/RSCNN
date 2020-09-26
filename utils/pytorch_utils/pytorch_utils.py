@@ -139,7 +139,7 @@ class GloAvgConv(nn.Module):
             self, 
             C_in, 
             C_out, 
-            init=nn.init.kaiming_normal, 
+            init=nn.init.kaiming_normal_, 
             bias = True,
             activation = nn.ReLU(inplace=True)
     ):
@@ -288,7 +288,7 @@ class Conv1d(_ConvBase):
             padding: int = 0,
             activation=nn.ReLU(inplace=True),
             bn: bool = False,
-            init=nn.init.kaiming_normal,
+            init=nn.init.kaiming_normal_,
             bias: bool = True,
             preact: bool = False,
             name: str = ""
@@ -322,7 +322,7 @@ class Conv2d(_ConvBase):
             padding: Tuple[int, int] = (0, 0),
             activation=nn.ReLU(inplace=True),
             bn: bool = False,
-            init=nn.init.kaiming_normal,
+            init=nn.init.kaiming_normal_,
             bias: bool = True,
             preact: bool = False,
             name: str = ""
@@ -356,7 +356,7 @@ class Conv3d(_ConvBase):
             padding: Tuple[int, int, int] = (0, 0, 0),
             activation=nn.ReLU(inplace=True),
             bn: bool = False,
-            init=nn.init.kaiming_normal,
+            init=nn.init.kaiming_normal_,
             bias: bool = True,
             preact: bool = False,
             name: str = ""
